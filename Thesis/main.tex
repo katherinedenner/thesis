@@ -1,0 +1,46 @@
+\documentclass[lof,lot,los,12pt,progress]{puseniorthesis}
+%options to class:
+% lof - generate list of figures
+% lot - generate list of tables
+% Xpt - font size
+% filecopy - note that this is 'File Copy' on title page
+% advisercopy - note that this is 'Adviser Copy' on title page
+% readercopy - note that this is 'Reader Copy' on title page
+% progress - change title page to say 'Progress Report' instead of 'Final Report'
+
+\usepackage{xcolor}
+\usepackage{graphicx} %need for \includegraphics
+\usepackage{amsmath}
+\usepackage{float}
+
+%required inputs:
+\author{Katherine Denner}
+\classyear{`19}
+\adviser{Daniel Steingart}
+\reader{My Reader}
+\title{Identification of lithium deposition and characterization of state of charge and health in extreme fast charge cells using ultrasonic methods}
+\dept{Mechanical and Aerospace Engineering}
+\submitdate{Sometime in the future}
+\course{MAE something}
+\abstract{\input abstract} %read from file abstract.tex
+
+%\extranotes{These are a few lines of optional notes} 
+\dedication{To myself.}
+\acknowledgements{Thank you very much.}
+
+\numberwithin{equation}{section}
+
+\begin{document}
+
+\include{ch1} %read from file ch1.tex
+
+\bibliography{ambiguityBonus}
+\bibliographystyle{plain}
+\nocite{*}
+
+\appendix
+
+\include{app1}
+
+
+\end{document}
