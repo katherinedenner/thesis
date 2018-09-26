@@ -1,19 +1,20 @@
-\documentclass[lof,lot,los,12pt,progress]{puseniorthesis}
-%options to class:
+\documentclass[lof,los,12pt,progress]{puseniorthesis}
+% options to class:
 % lof - generate list of figures
 % lot - generate list of tables
+% los - generate list of symbols
 % Xpt - font size
 % filecopy - note that this is 'File Copy' on title page
 % advisercopy - note that this is 'Adviser Copy' on title page
 % readercopy - note that this is 'Reader Copy' on title page
-% progress - change title page to say 'Progress Report' instead of 'Final Report'
+% progress - title page has 'Progress Report' instead of 'Final Report'
 
 \usepackage{xcolor}
-\usepackage{graphicx} %need for \includegraphics
+\usepackage{graphicx} % needed for \includegraphics
 \usepackage{amsmath}
 \usepackage{float}
 
-%required inputs:
+% required inputs:
 \author{Katherine Denner}
 \classyear{`19}
 \adviser{Daniel Steingart}
@@ -21,8 +22,8 @@
 \title{Identification of lithium deposition and characterization of state of charge and health in extreme fast charge cells using ultrasonic methods}
 \dept{Mechanical and Aerospace Engineering}
 \submitdate{Sometime in the future}
-\course{MAE something}
-\abstract{\input abstract} %read from file abstract.tex
+\course{MAE442}
+\abstract{\input{abstract}}
 
 %\extranotes{These are a few lines of optional notes} 
 \dedication{To myself.}
@@ -32,15 +33,28 @@
 
 \begin{document}
 
-\include{ch1} %read from file ch1.tex
+\include{introduction} % include pulls form precompiled .aux and is faster than \input, but won't work with labels from other sections; use it when able
 
-\bibliography{ambiguityBonus}
+%\include{apparatus design}
+
+%\include{electronics}
+
+%\include{firmware}
+
+%\include{experimentation}
+
+%\include{analysis}
+
+%\include{results}
+
+%\input{discussion}
+
+\bibliography{biblio}
 \bibliographystyle{plain}
 \nocite{*}
 
-\appendix
+%\appendix
 
-\include{app1}
-
+%\include{app1}
 
 \end{document}
