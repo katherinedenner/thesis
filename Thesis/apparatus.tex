@@ -1,0 +1,39 @@
+\chapter{Apparatus design}
+
+\section{Considerations}
+\begin{enumerate}
+    \item Frequency: resolution vs attenuation
+    \begin{enumerate}
+        \item Thinner cells require shorter wave lengths for useful resolution
+	    \item Shorter wavelengths require higher frequencies
+		\item Higher frequencies introduce greater attenuation
+	\end{enumerate}
+	\item Set-up: avoid near-field effects without introducing significant impedance
+		\begin{enumerate} 
+		    \item impedance is the result of medium transitions (e.g. the light traveling through air into a pool of water problem from physics)'
+		    \item The near-field effects make the earliest readings highly unwieldy
+	        \item Need to develop an apparatus that places enough distance between the transducer and the cell that the near-field effects have fallen away, but does so without introducing significant new impedances - be sure to impedance match materials and minimize number of materials
+	    \end{enumerate}
+	\item Pressure vs performance
+	    \begin{enumerate}
+		\item Need to exert enough pressure on the cell to ensure quality, consistent readings, but not so much that it materially effects battery behavior
+		\item Should be adjustable
+		\item Should apply a consistent pressure (<=0.5MPa) for SOC/SOH reasons, preferably light (to reduce experiment rest times) but potentially heavy if additional lithium deposition needs to be forced (see Cannarella)
+		\end{enumerate}
+    \item Securely and planarly mount as many as three transducers (to compare readings from different regions of cell - deposition should be asymmetric since leads are on one side)
+    \item Avoid clamping to the edges: the lamination sometimes causes lil bulges
+\end{enumerate}
+
+Questions:
+\begin{enumerate}
+	\item How to couple transducer to cell?
+	\item How to clamp cell?
+	\item How to secure transducers?
+    \item How to actuate set-up?
+\end{enumerate}
+
+\section{Sensors}
+
+\section{Structure}
+
+\section{Actuator}
