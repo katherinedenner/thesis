@@ -37,3 +37,21 @@ Questions:
 \section{Structure}
 
 \section{Actuator}
+Pneumatic piston was chosen for:
+\begin{enumerate}
+    \item relatively low cost (since air infrastructure is already present in lab)
+    \item low expected set-up/calibration time
+    \item relatively high precision
+    \item easily controlled by controlling the pressure of its intake
+    \item doesn't introduce any unnecessary degrees of freedom
+\end{enumerate}
+
+Piston selection:
+\begin{enumerate}
+    \item Form factor: flat sides, lots of mounting holes to conveniently and securely mount to structure
+    \item Force output: Will most probably want to exert a pressure in the range of 0-0.5 MPa (Cannarella's "low stack pressure"), but want to leave the option open of exerting a stack pressure of 1.5-3.0 MPa on cell (Cannarella's "high stack pressure"), in order to induce lithium plating if necessary; if this is done across an area of ~20cm\^2. McMaster (a convenient supplier) offers pistons of the desired form factor with force ratings of up to 779lbf at 100 psi, which assuming a clamp area of 4.5 cm\^2, would result in an exerted stack pressure of about 1.7 MPa.
+    \item Double-acting: will allow the piston to both push and pull itself, allowing for a more automated set-up
+    \item Non-rotating: piston constructed of two parallel rods, which prevents the piston from introducing a rotational moment
+    \item Stroke-length: implications ??
+\end{enumerate}
+    
