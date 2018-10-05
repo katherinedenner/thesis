@@ -35,7 +35,27 @@ Questions:
 \section{Sensors}
 
 \section{Structure}
+The structure has the following goals:
+\begin{enumerate}
+    \item Secure cell unit under test (UUT)
+    \item Locate cell UUT with some modicum of repeatability
+    \item Secure the transducers in place
+    \item Align the transducers perpendicular to the cell
+    \item Separate the cell and the transducers sufficiently to reduce noise
+\end{enumerate}
 
+The basic apparatus is two similar clamps, each of two blocks of aluminum which bolt together. Aluminum was chosen for its strength and machinability. In each clamp, the first block has an inset to hold a piece of plastic through which acts as a transmission medium for the ultrasonic waves to move between the transducers and the cell. The second block has a series of holes for holding the transducers. The total apparatus has two of these clamps, one of which is bolted directly to the rail and stays stationary, and the other of which is bolted to the carriage and is actuated to secure and release the cell for testing.
+
+To secure the cell unit under test, one of the clamps is mounted to a carriage which rides along a rail. A piston (controlled by a Pithy microcontroller) actuates to push the clamp into place to secure the cell, or pulls the clamp away to release the cell. The second clamp is rigidly bolted directly to the rail. This set-up allows the clamp to easily hold and remove the cell without adding unnecessary degrees of freedom. To locate the cell unit under test, the smaller block of the clamp fits around the cell, using the tabs for the leads as rough locators.
+
+Holes are cut into the clamp for the transducers to sit in. Below those holes are a second set of holes, smaller in diameter, for springs. The springs push the transducers flush against the transfer medium. They are tensioned by bolting the two halves of the clamp together, forcing the transducers into alignment with each other and with the cell. The transducer cables pass through clots cut into the side of the block.
+
+The second block in the clamp, the plate, is merely for holding the plastic which acts as transfer medium. Its purpose is to ensure that the ultrasonic waves experience Fraunhofer (far field) diffraction, rather than noisy Fresnel (near field) diffraction. \todo{do I need to cite this section?}
+Fraunhofer diffraction occurs when
+$$ \frac{W^2}{L\lambda} << 1$$
+where $W$ is the aperture or slit size, $L$ is the distance from the aperature, and $\lambda$ is the wavelength.
+$\lambda$ needs to be minimized for this experiment (thinner cells require shorter wavelengths for useful resolution of data, and $W$ is a variable we would rather not shrink below the diameter of the transducers in order to avoid interfereing with the transducers' data collection, which leaves only $L$ available for manipulation. Introducing a distance between the transducers and cell allows the experimental set-up to avoid Fresnel diffraction, but also introduces some losses due to the change in transmission media \todo{be more specific here}. The magnitude of the losses depends in part on the difference in the impedances of the two media, so \todo{material} was selected for its similar impedance to \todo{cell material} and its machinability. Machinability is important \todo{because}.
+ 
 \section{Actuator}
 Pneumatic piston was chosen for:
 \begin{enumerate}
@@ -51,7 +71,6 @@ Piston selection:
     \item Form factor: flat sides, lots of mounting holes to conveniently and securely mount to structure
     \item Force output: Will most probably want to exert a pressure in the range of 0-0.5 MPa (Cannarella's "low stack pressure"), but want to leave the option open of exerting a stack pressure of 1.5-3.0 MPa on cell (Cannarella's "high stack pressure"), in order to induce lithium plating if necessary; if this is done across an area of ~20cm\^2. McMaster (a convenient supplier) offers pistons of the desired form factor with force ratings of up to 779lbf at 100 psi, which assuming a clamp area of 4.5 cm\^2, would result in an exerted stack pressure of about 1.7 MPa.
     \item Double-acting: will allow the piston to both push and pull itself, allowing for a more automated set-up
-    \item Non-rotating: piston constructed of two parallel rods, which prevents the piston from introducing a rotational moment
     \item Stroke-length: implications ??
 \end{enumerate}
     
