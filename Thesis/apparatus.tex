@@ -24,14 +24,6 @@
     \item Avoid clamping to the edges: the lamination sometimes causes lil bulges
 \end{enumerate}
 
-Questions:
-\begin{enumerate}
-	\item How to couple transducer to cell?
-	\item How to clamp cell?
-	\item How to secure transducers?
-    \item How to actuate set-up?
-\end{enumerate}
-
 \section{Sensors}
 
 \section{Structure}
@@ -44,9 +36,9 @@ The structure has the following goals:
     \item Separate the cell and the transducers sufficiently to reduce noise
 \end{enumerate}
 
-The basic apparatus is two similar clamps, each of two blocks of aluminum which bolt together. Aluminum was chosen for its strength and machinability. In each clamp, the first block has an inset to hold a piece of plastic through which acts as a transmission medium for the ultrasonic waves to move between the transducers and the cell. The second block has a series of holes for holding the transducers. The total apparatus has two of these clamps, one of which is bolted directly to the rail and stays stationary, and the other of which is bolted to the carriage and is actuated to secure and release the cell for testing.
+The basic apparatus is two similar clamps, each of two blocks of aluminum which bolt together. Aluminum was chosen for its strength and machinability. The largest block has all the mounting holes for bolting the plastic transfer medium to the clamp, and for bolting the clamp to the rail. The second piece is much smaller, used only for securing the transducers; it had to be seperated from the main body of the clamp due to the form factor of the transducer. This section is sandwiched tightly in place between the main body of the clamp and the plastic transfer media. The block of plastic acts as a transmission medium for the ultrasonic waves to move between the transducers and the cell. The second block has a series of holes for holding the transducers. The total apparatus has two of these clamps, one of which is bolted directly to the rail and stays stationary, and the other of which is bolted to the carriage and is actuated to secure and release the cell for testing.
 
-To secure the cell unit under test, one of the clamps is mounted to a carriage which rides along a rail. A piston (controlled by a Pithy microcontroller) actuates to push the clamp into place to secure the cell, or pulls the clamp away to release the cell. The second clamp is rigidly bolted directly to the rail. This set-up allows the clamp to easily hold and remove the cell without adding unnecessary degrees of freedom. To locate the cell unit under test, the smaller block of the clamp fits around the cell, using the tabs for the leads as rough locators.
+To actuate the clamps, one of the clamps is mounted to a carriage which rides along a rail. A piston (controlled by a Pithy microcontroller) actuates to push the clamp into place to secure the cell, or pulls the clamp away to release the cell. The second clamp is rigidly bolted directly to the rail. This set-up allows the clamp to easily hold and remove the cell without adding unnecessary degrees of freedom. To locate the cell unit under test, the smaller block of the clamp fits around the cell, using the tabs for the leads as rough locators.
 
 Holes are cut into the clamp for the transducers to sit in. Below those holes are a second set of holes, smaller in diameter, for springs. The springs push the transducers flush against the transfer medium. They are tensioned by bolting the two halves of the clamp together, forcing the transducers into alignment with each other and with the cell. The transducer cables pass through clots cut into the side of the block.
 
@@ -71,6 +63,5 @@ Piston selection:
     \item Form factor: flat sides, lots of mounting holes to conveniently and securely mount to structure
     \item Force output: Will most probably want to exert a pressure in the range of 0-0.5 MPa (Cannarella's "low stack pressure"), but want to leave the option open of exerting a stack pressure of 1.5-3.0 MPa on cell (Cannarella's "high stack pressure"), in order to induce lithium plating if necessary; if this is done across an area of ~20cm\^2. McMaster (a convenient supplier) offers pistons of the desired form factor with force ratings of up to 779lbf at 100 psi, which assuming a clamp area of 4.5 cm\^2, would result in an exerted stack pressure of about 1.7 MPa.
     \item Double-acting: will allow the piston to both push and pull itself, allowing for a more automated set-up
-    \item Stroke-length: implications ??
 \end{enumerate}
     
