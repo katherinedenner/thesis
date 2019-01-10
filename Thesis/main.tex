@@ -1,4 +1,5 @@
-\documentclass[lof,los,12pt,progress]{puseniorthesis}
+%\documentclass[lof,los,12pt,progress]{puseniorthesis}
+\documentclass[12pt,progress]{puseniorthesis}
 % options to class:
 % lof, lot, lost - generate list of figures, tables, symbols
 % filecopy, advisercopy, readercopy - note that this is 'File Copy', 'Adviser Copy', 'Reader Copy' on title page
@@ -9,12 +10,14 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{todonotes}
+\usepackage{cleveref}
+\usepackage{hyperref}
 
 % required inputs:
 \author{Katherine Denner}
 \classyear{`19}
 \adviser{Daniel Steingart}
-% \reader{My Reader}
+\reader{ }
 \title{Identification of lithium deposition and characterization of state of charge and health in extreme fast charge cells using ultrasonic methods}
 \dept{Mechanical and Aerospace Engineering}
 \submitdate{10 January 2019}
@@ -22,16 +25,18 @@
 \abstract{\input{abstract}}
 
 %\extranotes{These are a few lines of optional notes} 
-\dedication{To myself.}
-\acknowledgements{Thank you very much.}
+%\dedication{To}
+%\acknowledgements{Thank}
 
 \numberwithin{equation}{section}
 
 \begin{document}
 
-\include{introduction} % include pulls form precompiled .aux and is faster than \input, but won't work with labels from other sections; use it when able
+\include{progressreport}
 
-\include{apparatus}
+\include{introduction} % include pulls from precompiled .aux and is faster than \input, but won't work with labels from other sections; use it when able
+
+\input{apparatus}
 
 %\include{electronics}
 
