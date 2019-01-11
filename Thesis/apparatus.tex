@@ -1,5 +1,8 @@
 \chapter{Apparatus design}
 
+%%
+%% CONSIDERATIONS
+%%
 \section{Considerations}
 \begin{enumerate}
     \item Frequency: resolution vs attenuation
@@ -24,9 +27,14 @@
     \item Avoid clamping to the edges: the lamination sealing the cell's outer layer sometimes causes small bulges that could prevent the blocks from pressing rigidly and gaplessly against the cell
 \end{enumerate}
 
-\section{Sensors}
+%%
+%% SENSORS %%
+%%
+%\section{Sensors}
 
-
+%%
+%% STRUCTURE %%
+%%
 \section{Structure}
 To carry out this experiment, the apparatus must secure the cell for the duration of the testing while reliably applying the desired stack pressure, must keep the ultrasonic transducers on each side of the cell aligned (coaxial) with each other, must align the transducers perpendicular to the cell, and must separate the cell and the transducers sufficiently to reduce noise; each of these requirements will be discussed in detail soon.
 
@@ -34,10 +42,10 @@ The basic apparatus is a pair of blocks mounted to a rail. A row of holes is dri
 
 Behind the first set of holes in the block is a second set of narrower holes, for spring-loading the transducers. The springs ensure the transducers are pressed against the face of the transfer medium. The faces of the Rexolite cylinders are turned flat so that the transducer emits and receives waves at an angle perpendicular to the test article. The plate further facilitates keeping everything coaxial. The three parts bolts together using one set of bolts which pass through all three, ensuring a tight, flat fit. This both keeps the transducers perpendicular to the test article and coaxial with each each other, as well as preventing any disruptive air from getting in the path of the ultrasonic waves, allowing unnecessary attenuation to reduce the quality of the data. Aluminum was chosen as the material for the blocks for its durability and machinability. Machinability was important because of the relatively tight tolerances required of these parts. Since the test articles are so thin and the ultrasonic transducers to high-frequency, small differences in actual versus expected transducer position could create insurmountable noise in the readings. The total apparatus has two of these block assemblies. One block is bolted directly to the rail and held stationary during the tests. The other is connected to via threaded rod to a double-acting piston and fixed to a carriage which rides along the rail. The piston is fixed to the rail by a bracket, and extends to push the block along the rail, securing the cell. By varying the pressure supplied to the piston, it can be used to apply a controlled stack pressure to the cell during testing.
 
-The Rexolite cylinder is included to ensure that the ultrasonic waves experience Fraunhofer (far field) diffraction, rather than noisy Fresnel (near field) diffraction. The extent of the near field $N$ is determined as follows:
-$$ N = D^2 f / 4c $$
+The Rexolite cylinder is included in the assembly as a transmission medium to ensure that the ultrasonic waves traverse the cell during Fraunhofer (far field) diffraction, rather than during noisy Fresnel (near field) diffraction. The extent of the near field $N$ is determined as follows:
+$$ N = \frac{D^2 f} {4c} $$
 where $D$ is the element diameter, $f$ is the wave frequency, and $c$ is the material sound velocity \cite{OLYMPUS}.
-$f$ needs to be kept high for this experiment, because thinner cells require shorter wavelengths and thus greater frequencies to generate data at a useful resolution, and the cells of interest have a thickness on the order of microns. $D$ is fixed characteristic of the sensors. $c$ is a function of the transmission medium, and a medium besides the case of the cell will be necessary if $N$ is greater than the cell casing thickness, which in this case it is. The only one of those variables which is able to be somewhat manipulated for this experiment is $c$, which is an important consideration in transmission media materials selection. Thus, to avoid near field effects, the transducers must be mounted far enough from the cell that the wave does not enter the cell until after it has entered the far field regime. The near-field distance for combinations of two different transducers and two different transmission media is shown in \autoref{tab:nearfield}.
+$f$ needs to be kept high for this experiment, because thinner cells require shorter wavelengths\todo{elaborate} and thus greater frequencies to generate data at a useful resolution, and the cells of interest have a thickness on the order of microns. $D$ is fixed characteristic of the sensors. $c$ is a function of the transmission medium, and a medium besides the case of the cell will be necessary if $N$ is greater than the cell casing thickness, which in this case it is. The only one of those variables which is able to be somewhat manipulated for this experiment is $c$, which is an important consideration in transmission media materials selection. Thus, to avoid near field effects, the transducers must be mounted far enough from the cell that the wave does not enter the cell until after it has entered the far field regime. The near-field distance for combinations of two different transducers and two different transmission media is shown in \autoref{tab:nearfield}. The table shows that 1) ultrasonic transducers create waves which have much too large a near field to be mounted directly against the cell under test, and 2) in order for the apparatus to be useful with more ultrasonic sensors operating at different frequencies, the transmission media for the apparatus need to be modular so as to swap in transmission media of different sizes. In theory one could also change the material of the media to counteract greater or smaller near field effects, but it is more practical to change the size of the component. 
 
 \begin{table}[]
     \centering
@@ -54,6 +62,9 @@ $f$ needs to be kept high for this experiment, because thinner cells require sho
 
 Introducing a distance between the transducers and cell allows the experimental set-up to avoid Fresnel diffraction, but also introduces some losses due to the change in transmission media \todo{be more specific here}. The magnitude of the losses depends in part on the difference in the impedances of the two media, so Rexolite (a variety of Nylon) was selected for its similar impedance to the aluminized polymer that comprises the outer layer of the battery cell, keeping the signal attenuation to a minimum. Additionally Rexolite takes to machining and finishing wel, and for this material, it was important to be able to machine a flat surface onto the faces which contact the ultrasonic transducers and the test articles, in order to keep any dust or air from getting into the path of the ultrasonic waves and introducing noise to the readings.
  
+%%
+%% ACTUATOR
+%%
 \section{Actuator}
 The pneumatic piston was chosen as the actuator primarily for its relatively high precision and its relatively low cost. Other advantages include the relatively low set-up and calibration time required, its ease of control by adding an electronic or manually set pressure regulator into its air line, and its lack of any extraneous degrees of freedom. This piston in particular was chosen for having an internal double rail, which further reduces the potential for the piston to introduce misalignment into the system. Another factor considered in choosing the particular piston were its form factor. The chosen piston has flat sides and copious mounting holes, making it convenient to mount into the apparatus. Another important consideration is range of pressure outputs. While most of the time the desired stack pressure will likely be in Cannarella's "low stack pressure" regime (0-0.5MPa) \cite{STACK-STRESS}, its useful to leave open the option of inducing Cannarella's "high stack pressure" regime \cite{STACK-STRESS}, peaking at as much as 3.0 MPa, in order to induce lithium plating, if necessary. \todo{insert calculations ?} Thus, it is useful to have a piston capable of a broad range of output forces. A final useful feature is the piston's double acting configuration, which allows the piston to instantaneouly either extend or retract without needing to reroute airlines.
     
