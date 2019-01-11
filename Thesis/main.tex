@@ -1,5 +1,4 @@
-%\documentclass[lof,los,12pt,progress]{puseniorthesis}
-\documentclass[12pt,progress]{puseniorthesis}
+\documentclass[lof,lot,los,12pt]{puseniorthesis}
 % options to class:
 % lof, lot, lost - generate list of figures, tables, symbols
 % filecopy, advisercopy, readercopy - note that this is 'File Copy', 'Adviser Copy', 'Reader Copy' on title page
@@ -10,7 +9,6 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{todonotes}
-\usepackage{cleveref}
 \usepackage{hyperref}
 
 % required inputs:
@@ -32,11 +30,9 @@
 
 \begin{document}
 
-\include{progressreport}
-
 \include{introduction} % include pulls from precompiled .aux and is faster than \input, but won't work with labels from other sections; use it when able
 
-\input{apparatus}
+\input{apparatus} % use input rather than include so that labels sync
 
 %\include{electronics}
 
