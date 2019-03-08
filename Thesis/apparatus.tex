@@ -76,15 +76,22 @@ Additionally, Rexolite takes to machining and finishing well, and for this mater
 \section{Actuator}
 The pneumatic piston was chosen as the actuator primarily for its relatively high precision and its relatively low cost. Other advantages include the relatively low set-up and calibration time required, its ease of control by adding an electronic or manually set pressure regulator into its air line, and its lack of any extraneous degrees of freedom. This piston in particular was chosen for having an internal double rail, which further reduces the potential for the piston to introduce misalignment into the system. Another factor considered in choosing the particular piston were its form factor. The chosen piston has flat sides and copious mounting holes, making it convenient to mount into the apparatus. Another important consideration is range of pressure outputs. While most of the time the desired stack pressure will likely be in Cannarella's "low stack pressure" regime (0-0.5MPa) \cite{STACK-STRESS}, its useful to leave open the option of inducing Cannarella's "high stack pressure" regime \cite{STACK-STRESS}, peaking at as much as 3.0 MPa, in order to induce lithium plating, if necessary. \todo{insert calculations ?} Thus, it is useful to have a piston capable of a broad range of output forces. A final useful feature is the piston's double acting configuration, which allows the piston to instantaneously either extend or retract without needing to reroute airlines. The piston is actuated by a relay and controlled by a Particle Photon microcontroller.
 
+\section{Thermal Chamber}
+lol
+
 \section{Electronics}
 \todo{insert lil flowchart}
 \begin{itemize}
-    \item transducers
     \item signal generator
     \item signal scope
-    \item fridge 
-    \item fridge controller
+    \item sensors
+        \subitem pressure gauge
+        \subitem thermocouples
+        \subitem transducers
+        \subitem current measurement
+        \subitem voltage measurement
+        \todo{read papers to get handle on four-lead measurement and cycling set-up}
     \item piston controller
-    \item cell cycler
-    \item gigabytes (daq?)
+    \item Neware cell cycler
+    \item gigabytes (daq?) \todo{were these even used?}
 \end{itemize}
