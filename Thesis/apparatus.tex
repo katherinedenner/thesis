@@ -57,6 +57,7 @@ Thus, to avoid near field effects, the transducers must be mounted far enough fr
     \centering
     \begin{tabular}{c|c|c|c}
          $f$ (MHz) & $D$ (mm) & $c$ (m/s) & $N$ (cm) \\
+         \hline
          10 & 6.35 & 2400 & 4.2 \\
          20 & 6.35 & 2400 & 8.4 \\
          10 & 6.35 & 2600 & 3.88 \\
@@ -76,8 +77,11 @@ Additionally, Rexolite takes to machining and finishing well, and for this mater
 \section{Actuator}
 The pneumatic piston was chosen as the actuator primarily for its relatively high precision and its relatively low cost. Other advantages include the relatively low set-up and calibration time required, its ease of control by adding an electronic or manually set pressure regulator into its air line, and its lack of any extraneous degrees of freedom. This piston in particular was chosen for having an internal double rail, which further reduces the potential for the piston to introduce misalignment into the system. Another factor considered in choosing the particular piston were its form factor. The chosen piston has flat sides and copious mounting holes, making it convenient to mount into the apparatus. Another important consideration is range of pressure outputs. While most of the time the desired stack pressure will likely be in Cannarella's "low stack pressure" regime (0-0.5MPa) \cite{STACK-STRESS}, its useful to leave open the option of inducing Cannarella's "high stack pressure" regime \cite{STACK-STRESS}, peaking at as much as 3.0 MPa, in order to induce lithium plating, if necessary. \todo{insert calculations ?} Thus, it is useful to have a piston capable of a broad range of output forces. A final useful feature is the piston's double acting configuration, which allows the piston to instantaneously either extend or retract without needing to reroute airlines. The piston is actuated by a relay and controlled by a Particle Photon microcontroller.
 
+%%
+% THERMAL CHAMBER
+%%
 \section{Thermal Chamber}
-lol
+A modified minifridge serves as a thermal chamber to hold the temperature roughly constant during the tests. Some of the fridge's insulation needed to be cut away to allow airlines for the actuator to pass out of the fridge to the air source so it does not perfectly hold temperature, but the results are constant enough that a validation test confirmed that the thermal chamber prevents temperature-induced noise from overwhelming the acoustic signal \todo{ref rel sec}. The thermal chamber's temperature is not actively controlled; rather, it passively maintains its internal temperature by means of well-insulated walls and high thermal inertia filler (water-filled plastic containers). Its temperature is monitored by three thermocouples.
 
 \section{Electronics}
 \todo{insert lil flowchart}
