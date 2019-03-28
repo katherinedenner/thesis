@@ -18,13 +18,23 @@
 \section{Acoustic Time of Flight (ToF) Analysis}
 Recent work has shown that Acoustic Time of Flight (ToF) Analysis can show the state of charge and state of health of battery cells.
 
-explain ToF
+Acoustic ToF analysis probes a unit with continuous acoustic waves, and makes conclusions based on how long it takes for waves to travel to the receiver (either the waves which travel through the test unit to a receiver, or the waves which reflect off of the material and back to the transmitter). How long it takes for a wave to travel from one point to another depends on the ubiquitous relation 
+$$\text{distance} = \text{ rate} \times \text{ time} \rightarrow \text{ time} = \frac{\text{distance}}{\text{rate}}$$
 
-First, Hsieh et al \todo{cite?} performed electrochemical-acoustic time-of-flight (EAToF) experiments on batteries of various chemistries and form factors, demononstrating "strong correlation between SOC and the density distribution within a cell, as determined by acoustic measurements" \cite{TOF-STATE}. They go on to conclude that "changes in the ToF echo profiles and acoustic signal amplitudes as a function of cycle number appear to be key indicators of central phenomena occurring within the battery, including changes in intraparticle and interparticle stress and strain, as well as the formation and removal of critical surface layers", suggesting but not demonstrating that electrochemical-acoustic ToF analysis can determine a battery cell's state of health.
+Nondestructive ultrasonic analysis measures the time of flight (how long it takes the wave to travel either back to the transmitter, or to a receiver), and the amplitude of the received signal. These quantities can be used to estimate the thickness of the material, $T$:
+$$ T = \frac{ct}{2}$$
+
+where $c$ is the material sound velocity, an $t$ is the duration of the flight \cite{OLYMPUS}. Thus, if $c$ can be assumed constant, $T$ can be measured using only $t$. Ensuring $c$ can be assumed sufficiently constant was an important consideration in apparatus design, to be discussed later.
+
+High frequency waves are used because BLANK however BLANK
+
+\subsection{Prior Work}
+
+First, Hsieh et al \todo{cite?} performed electrochemical-acoustic time-of-flight (EAToF) experiments on batteries of various chemistries and form factors, demonstrating "strong correlation between SOC and the density distribution within a cell, as determined by acoustic measurements" \cite{TOF-STATE}. They go on to conclude that "changes in the ToF echo profiles and acoustic signal amplitudes as a function of cycle number appear to be key indicators of central phenomena occurring within the battery, including changes in intraparticle and interparticle stress and strain, as well as the formation and removal of critical surface layers", suggesting but not demonstrating that electrochemical-acoustic ToF analysis can determine a battery cell's state of health.
 
 That assertion was demonstrated in the subsequent paper by Bhadra et al \todo{cite?} \cite{ANODE-CHAR}, which demonstrated the capacity of electrochemical acoustic time-of-flight analysis to "examine the dynamic properties of cells during discharge" "by tracking the saturation of the central echo and secondary echos, the total shift in the ToF peak position over discharge, and total transmitted signal amplitude".
 
-This work was pushed futher by Davies et al \todo{cite?} \cite{SOC-SOH-EST}, which explored the accuracy of the EAToF method while cycling lithium-ion pouch cells over hundreds of cycles, producing "two key metrics: time of flight shift and total signal amplitude, which are the used with voltage data in a supervised machine learning technique to build a model for the state of charge (SOC) prediction". Not only did they show their model was about $99\%$ accurate for two different cell chemistries, but they showed that the model can be extended to predict state of health with similar accuracy by adding to the model the full ultrasonic waveforms at top of charge.
+This work was pushed further by Davies et al \todo{cite?} \cite{SOC-SOH-EST}, which explored the accuracy of the EAToF method while cycling lithium-ion pouch cells over hundreds of cycles, focusing on "two key metrics: time of flight shift and total signal amplitude, which are the used with voltage data in a supervised machine learning technique to build a model for the state of charge (SOC) prediction". In addition to showing their model was about $99\%$ accurate for two different cell chemistries, they showed that the model can be extended to predict state of health with similar accuracy by adding to the model the full ultrasonic waveforms at top of charge.
 
 \todo{waves blurb}
 
@@ -32,5 +42,3 @@ This work was pushed futher by Davies et al \todo{cite?} \cite{SOC-SOH-EST}, whi
 
 \todo{Other factors which affect $c$}
 What some noise contributions are
-
-\subsection{Prior Work}
