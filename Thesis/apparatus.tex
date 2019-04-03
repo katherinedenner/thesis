@@ -90,17 +90,12 @@ A modified minifridge serves as a thermal chamber to hold the temperature roughl
 
 \section{Electronics}
 \todo{insert lil flowchart}
-\begin{itemize}
-    \item signal generator
-    \item signal scope
-    \item sensors
-        \subitem pressure gauge
-        \subitem thermocouples
-        \subitem transducers
-        \subitem current measurement
-        \subitem voltage measurement
+
+Signal is created by a signal generator, per programmed parameters. This is passed through the transducer, which forms it into an acoustic wave. It passes this wave through the test unit to be received by a second transducer opposite it on the other side of the unit. The reading transducer is connected to a signal scope (the Picoscope unit) which reads this signal and reports it to the computer.
+
+Simultaneously, the Neware cycler unit is sending a current-controlled signal through the leads of the cell via a pair of leads, and using a second pair of leads to read the cell's current and voltage. Timestamps are used to connect this electrochemical data with the acoustic data.
+
+Additionally, a set of thermocouples is used to monitor the temperature within the thermal chamber, to ensure that time of flight shifts are due to changes in the cell's activity and state rather than its temperature. These are read across a simple voltage divider and monitored by a microcontroller, with timestamps used to connect this thermal data with the electrochemical and acoustic data.
+
+A separate microcontroller drives the piston which applies a relatively consistent force to the cell during testing, controlling its stack pressure. A relieving pressure gauge modules the magnitude of this force to a roughly constant value, but it does not report the value and so the stack pressure is not logged. Adding this capability was considered, but it would have added expense to the testing setup and early trials showed that the current setup was sufficient.
         \todo{read papers to get handle on four-lead measurement and cycling set-up}
-    \item piston controller
-    \item Neware cell cycler
-    \item gigabytes (daq?) \todo{were these even used?}
-\end{itemize}
