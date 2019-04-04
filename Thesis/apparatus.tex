@@ -1,35 +1,50 @@
-\chapter{Apparatus design}
+\chapter{Apparatus Design}
 
 %%
 %% CONSIDERATIONS
 %%
 \section{Background}
+These experiments require a fixture that will repeatably hold the three key components of the experiment set-up: the battery cell being tested, the transmitting transducer, and the receiving transducer. 
+There are a number of positional requirements. 
+If the transducers are not axially-aligned, nontrivial errors can be introduced to the time of flight measurements.
+If all surfaces between the two transducer faces do not align squarely, the waves will travel through air, introducing error to the time of flight measurements. 
+The apparatus is also limited in where it may contact the cell. It has to leave the edges clear, because the lamination sealing the cell's outer layer sometimes causes small bulges, which could prevent the apparatus from pressing rigidly against both sides of the cell.
 
-\section{Impedance}
-Rienstra \& Hirschberg p. 36
+The apparatus would need to be able to apply a consistent and controllable pressure to the battery cell. 
+This is due to the emerging role of stack pressure in the state of health of a cell. 
+Canarella showed that, when a cell is held such that it cannot expand, stack pressure builds up as it cycles, causing chemical degradation to the electrode and potentially inhibiting transport \cite{STACK-STRESS}. Stack stress has a material effect on battery state of health and must be controlled for.
+\todo{cite}
+Thus, the apparatus must hold the cell rigidly enough to prevent gaps forming in the acoustic pathway from the transmitting transducer to the receiving transducer, yet must also not apply so much pressure that it inhibits the very behavior which the experiment is intended to observe. 
+The pressure should be adjustable. This is in part because cells of different geometries will require different forces to experience a particular stack pressure. 
+Additionally, Cannarella defined low, medium, and high stack pressure regimes, and the high pressure regime could be used to induce lithium plating if need be.
 
-\section{Considerations}
+After initial experimentation, it became clear that the apparatus would also have to be relatively temperature controlled. 
+Temperature fluctuations lead to material changes in time of flight through the cell, introducing so much noise to the data that the signal was totally obscured.
+A thermal chamber was added to the set-up to hold the temperature of the cell and transducers more constant, along with thermocouples and a microcontroller to log the temperature data for use during the electrochemical-acoustical analysis.
+
+\section{Transducer Considerations}
+The transducers introduce a number of important considerations into the design process.
 \begin{enumerate}
     \item Frequency: resolution vs attenuation
     \begin{enumerate}
         \item Thinner cells require shorter wave lengths for useful resolution
+        \todo{olympus p ??}
 	    \item Shorter wavelengths require higher frequencies
 		\item Higher frequencies introduce greater attenuation
+		\todo{olympus p 45}
 	\end{enumerate}
 	\item Set-up: avoid near-field effects without introducing significant impedance
 		\begin{enumerate} 
 		    \item impedance is the result of medium transitions (e.g. the light traveling through air into a pool of water problem from physics)'
+		    \todo{olympus p. 45}
 		    \item The near-field effects make the earliest readings highly unwieldy
+		    \todo{olympus 45}
 	        \item Need to develop an apparatus that places enough distance between the transducer and the cell that the near-field effects have fallen away, but does so without introducing significant new impedances - be sure to impedance match materials and minimize number of materials
+	        \todo{olympus 45 - has a good pic}
+	        \item transducer focal zone
+	        \todo{compute focal zones of 2.5MHz, 10MHz, 15MHz}
+	        \todo{olympus 46}
 	    \end{enumerate}
-	\item Pressure vs performance
-	    \begin{enumerate}
-		\item Need to exert enough pressure on the cell to ensure quality, consistent readings, but not so much that it materially effects battery behavior
-		\item Should be adjustable, to be used with cells of different sizes
-		\item Should apply a consistent pressure ($\leq$ 0.5MPa) for SOC/SOH reasons, preferably light (to reduce experiment rest times) but potentially heavy if additional lithium deposition needs to be forced \cite{STACK-STRESS}
-		\end{enumerate}
-    \item Securely and planarly mount as many as three transducers (to compare readings from different regions of cell - deposition should be asymmetric since leads are on one side)
-    \item Avoid clamping to the edges: the lamination sealing the cell's outer layer sometimes causes small bulges that could prevent the blocks from pressing rigidly and gaplessly against the cell
 \end{enumerate}
 
 %%

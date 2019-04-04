@@ -12,6 +12,7 @@
 \subsection{Lithium Plating}
 
 \subsection{These Cells}
+needed?
 
 \todo{section title}
 
@@ -24,7 +25,9 @@ $$\text{distance} = \text{ rate} \times \text{ time} \rightarrow \text{ time} = 
 Nondestructive ultrasonic analysis measures the time of flight (how long it takes the wave to travel either back to the transmitter, or to a receiver), and the amplitude of the received signal. These quantities can be used to estimate the thickness of the material, $T$:
 $$ T = \frac{ct}{2}$$
 
-where $c$ is the material sound velocity, an $t$ is the duration of the flight \cite{OLYMPUS}. Thus, if $c$ can be assumed constant, $T$ can be measured using only $t$. Ensuring $c$ can be assumed sufficiently constant was an important consideration in apparatus design, to be discussed later.
+where $c$ is the material sound velocity, an $t$ is the duration of the flight \cite{OLYMPUS}. 
+Thus, if $c$ can be assumed constant, $T$ can be measured using only $t$.
+Ensuring $c$ can be assumed sufficiently constant was an important consideration in apparatus design, to be discussed later.
 
 High frequency waves are used because BLANK however BLANK
 
@@ -34,11 +37,10 @@ Hsieh et al \todo{cite?} performed electrochemical-acoustic time-of-flight (EATo
 
 That assertion was demonstrated in the subsequent paper by Bhadra et al \todo{cite?} \cite{ANODE-CHAR}, which demonstrated the capacity of electrochemical acoustic time-of-flight analysis to "examine the dynamic properties of cells during discharge" "by tracking the saturation of the central echo and secondary echos, the total shift in the ToF peak position over discharge, and total transmitted signal amplitude".
 
-This work was pushed further by Davies et al \todo{cite?} \cite{SOC-SOH-EST}, which explored the accuracy of the EAToF method while cycling lithium-ion pouch cells over hundreds of cycles, focusing on "two key metrics: time of flight shift and total signal amplitude, which are the used with voltage data in a supervised machine learning technique to build a model for the state of charge (SOC) prediction". In addition to showing their model was about $99\%$ accurate for two different cell chemistries, they showed that the model can be extended to predict state of health with similar accuracy by adding to the model the full ultrasonic waveforms at top of charge.
+This work was built on by Davies et al \todo{cite?} \cite{SOC-SOH-EST}, who explored the accuracy of the EAToF method while cycling lithium-ion pouch cells over hundreds of cycles, focusing on "two key metrics: time of flight shift and total signal amplitude, which are the used with voltage data in a supervised machine learning technique to build a model for the state of charge (SOC) prediction". 
+In addition to showing their model was about $99\%$ accurate for two different cell chemistries, they showed that the model can be extended to predict state of health with similar accuracy by adding to the model the full ultrasonic waveforms at top of charge.
 
 \todo{waves blurb}
-
-\todo{Frensel and Fraunhofer components}
 
 \todo{Other factors which affect $c$}
 What some noise contributions are
