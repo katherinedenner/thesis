@@ -41,6 +41,15 @@ The apparatus should position the transducers relative to the battery cell such 
 Acoustic impedance is a material's "opposition to displacement of its particles by sound" \cite{OLYMPUS}. It must be minimized in the path between the transducer and the cell in order ensure strong readings. Acoustic impedance, $Z$, is a function of
 $$ Z = \rho c$$
 where $\rho$ is the material's density and $c$ is the material's sound velocity \cite{OLYMPUS}.
+At the boundary between two materials - the acoustic interface - impedance differences cause energy losses. At an acoustic boundary, part of a wave is transmitted, and part reflected; each signal experiences energy loss due to the acoustic interface, but the magnitude varies depending on the relative magnitudes of the two material's impedances.
+For the transmitted wave, the loss can be calculated as follows:
+$$ \text{dB loss} = 10 \log_{10} \frac{4Z_1 Z_2}{(Z_1 + Z_2)^2}$$
+where $Z_1$ is the impedance of the first material and $Z_2$ is the impedance of the second \cite{OLYMPUS}.
+
+For the reflected wave, 
+$$\text{dB loss} = 10\log_{10} \frac{(Z_2 - Z_1)^2}{(Z_1 + Z_2)^2} \cite{OLYMPUS}$$
+
+For reflected waves, it is clear that the relative magnitude of the two impedances is very important, with materials of more similar impedances causing less loss.
 
 \begin{enumerate}
 		\todo{olympus p 45}
@@ -49,7 +58,6 @@ where $\rho$ is the material's density and $c$ is the material's sound velocity 
 		    \item impedance is the result of medium transitions (e.g. the light traveling through air into a pool of water problem from physics)'
 		    \todo{olympus p. 45}
 		    \todo{olympus 45}
-	        \item  without introducing significant new impedances - be sure to impedance match materials and minimize number of materials
 	        \todo{olympus 45 - has a good pic}
 	        \item transducer focal zone
 	        \todo{compute focal zones of 2.5MHz, 10MHz, 15MHz}
