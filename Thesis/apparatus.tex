@@ -23,23 +23,33 @@ Temperature fluctuations lead to material changes in time of flight through the 
 A thermal chamber was added to the set-up to hold the temperature of the cell and transducers more constant, along with thermocouples and a microcontroller to log the temperature data for use during the electrochemical-acoustical analysis.
 
 \section{Transducer Considerations}
+\subsection{Frequency versus Attenuation}
 The transducers introduce a number of important considerations into the design process.
+The selected transducers were \todo{number} MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would create a thickness of \todo{calc}. For such a small change in thickness to be perceptible by the transducers, they would need to have a very small wavelength \todo{why}. Due to the simple relationship 
+$$ \lambda = c/f$$
+a transducer with a small wavelength will have an accordingly large frequency. At such a high frequency, the readings will be quite susceptible to attenuation, which increases linearly with the square of frequency and the square of bandwidth \cite{olympus}, putting resolution and attenuation at odds. Attenuation is \todo{what is}.
+
+\subsection{Near-Field Effects}
+The sound field of a transducer is not constant, but rather split into two zones with distinct behavior: the near-field (or Fresnel) zone, and the far-field (or Fraunhofer) zone \cite{OLYMPUS}. 
+The near-field zone is a small region immediately following the transducer, and is a place of considerable noise due to rapid switches between energy minima and maxima. 
+The last of these maxima is located at the near field distance $N$, and forms the boundary between the near field and far field regions. \cite{OLYMPUS}
+In the far-field, sound field pressure decreases monotonically and gently until it reaches zero. \cite{OLYMPUS}
+It is a much more predictable zone and thus more suited to the delicate amplitude measurements required for accurate time of flight measurements at this scale.
+The apparatus should position the transducers relative to the battery cell such that it falls into the far field region, but not so far into that region that the sound field pressure has become unworkably weak.
+
+\subsection{Impedance}
+Acoustic impedance is a material's "opposition to displacement of its particles by sound" \cite{OLYMPUS}. It must be minimized in the path between the transducer and the cell in order ensure strong readings. Acoustic impedance, $Z$, is a function of
+$$ Z = \rho c$$
+where $\rho$ is the material's density and $c$ is the material's sound velocity \cite{OLYMPUS}.
+
 \begin{enumerate}
-    \item Frequency: resolution vs attenuation
-    \begin{enumerate}
-        \item Thinner cells require shorter wave lengths for useful resolution
-        \todo{olympus p ??}
-	    \item Shorter wavelengths require higher frequencies
-		\item Higher frequencies introduce greater attenuation
 		\todo{olympus p 45}
-	\end{enumerate}
 	\item Set-up: avoid near-field effects without introducing significant impedance
 		\begin{enumerate} 
 		    \item impedance is the result of medium transitions (e.g. the light traveling through air into a pool of water problem from physics)'
 		    \todo{olympus p. 45}
-		    \item The near-field effects make the earliest readings highly unwieldy
 		    \todo{olympus 45}
-	        \item Need to develop an apparatus that places enough distance between the transducer and the cell that the near-field effects have fallen away, but does so without introducing significant new impedances - be sure to impedance match materials and minimize number of materials
+	        \item  without introducing significant new impedances - be sure to impedance match materials and minimize number of materials
 	        \todo{olympus 45 - has a good pic}
 	        \item transducer focal zone
 	        \todo{compute focal zones of 2.5MHz, 10MHz, 15MHz}
