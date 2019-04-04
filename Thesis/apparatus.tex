@@ -50,20 +50,15 @@ For the reflected wave,
 $$\text{dB loss} = 10\log_{10} \frac{(Z_2 - Z_1)^2}{(Z_1 + Z_2)^2} \cite{OLYMPUS}$$
 
 For reflected waves, it is clear that the relative magnitude of the two impedances is very important, with materials of more similar impedances causing less loss.
+\todo{olympus 45 - good pic}
 
-\begin{enumerate}
+\subsection{Focal Zone}
 		\todo{olympus p 45}
-	\item Set-up: avoid near-field effects without introducing significant impedance
 		\begin{enumerate} 
-		    \item impedance is the result of medium transitions (e.g. the light traveling through air into a pool of water problem from physics)'
-		    \todo{olympus p. 45}
-		    \todo{olympus 45}
-	        \todo{olympus 45 - has a good pic}
 	        \item transducer focal zone
 	        \todo{compute focal zones of 2.5MHz, 10MHz, 15MHz}
 	        \todo{olympus 46}
 	    \end{enumerate}
-\end{enumerate}
 
 %%
 %% SENSORS %%
@@ -74,17 +69,19 @@ For reflected waves, it is clear that the relative magnitude of the two impedanc
 %% STRUCTURE %%
 %%
 \section{Structure}
-To carry out this experiment, the apparatus must secure the cell for the duration of the testing while reliably applying the desired stack pressure, must keep the ultrasonic transducers on each side of the cell aligned (coaxial) with each other, must align the transducers perpendicular to the cell, and must separate the cell and the transducers sufficiently to reduce noise; each of these requirements will be discussed in detail soon.
-
 \todo{PIC cad ass whole}
 
 The basic apparatus is a pair of blocks mounted to a rail. A row of holes is drilled into the blocks to hold an array of ultrasonic transducers, with channels milled out for routing their cables. A small plate with its own set of holes and channels bolts to this block to hold the transducers in place. Bolting to this plate is a small cylinder of Rexolite (a nylon variant), used as a low-interference medium for manipulating the travel distance of the ultrasonic waves to eliminate near-field effects, as will be discussed in greater detail later.
 
 \todo{PIC cad part block}
-Behind the first set of holes in the block is a second set of narrower holes, for spring-loading the transducers. The springs ensure the transducers are pressed against the face of the transfer medium. The faces of the Rexolite cylinders are turned flat so that the transducer emits and receives waves at an angle perpendicular to the test article. \todo{PIC cad part plate} The plate further facilitates keeping everything coaxial. The three parts bolts together using one set of bolts which pass through all three, ensuring a tight, flat fit \todo{PIC subass block plate Rexolite ducers bolts}. This both keeps the transducers perpendicular to the test article and coaxial with each each other, as well as preventing any disruptive air from getting in the path of the ultrasonic waves, allowing unnecessary attenuation to reduce the quality of the data. Aluminum was chosen as the material for the blocks for its durability and machinability. Machinability was important because of the relatively tight tolerances required of these parts. Since the test articles are so thin and the ultrasonic transducers to high-frequency, small differences in actual versus expected transducer position could create insurmountable noise in the readings. Of particular importance where flatness of the various components (so that small angles are not introduced to the transducer position) and accuracy of the hole positions for the transducers relative to each other and to the mounting hole for the piston rod. Additionally, the fit of the holes for the transducers is important; it must be snug enough that they transducers are held perpendicular to the test article and not allowed to rock around, while also allowing free enough translational movement along their center axis for the springs to be able to push them firmly against the transmission medium.
+Behind the first set of holes in the block is a second set of narrower holes, for spring-loading the transducers. The springs ensure the transducers are pressed against the face of the transfer medium. The faces of the Rexolite cylinders are turned flat so that the transducer emits and receives waves at an angle perpendicular to the test article. \todo{PIC cad part plate} The plate further facilitates keeping everything coaxial. The three parts bolt together using one set of bolts which pass through all three, ensuring a tight, flat fit \todo{PIC subass block plate Rexolite ducers bolts}. This both keeps the transducers perpendicular to the test article and coaxial with each each other, as well as preventing any disruptive air from getting in the path of the ultrasonic waves, allowing unnecessary attenuation to reduce the quality of the data. 
+
+\subsection{Manufacturing Considerations}
+Aluminum was chosen as the material for the blocks for its durability and machinability. Machinability was important because of the relatively tight tolerances required of these parts. Since the test articles are so thin and the ultrasonic transducers to high-frequency, small differences in actual versus expected transducer position could create insurmountable noise in the readings. Of particular importance were flatness of the various components (so that small angles are not introduced to the transducer position) and accuracy of the hole positions for the transducers relative to each other and to the mounting hole for the piston rod. Additionally, the fit of the holes for the transducers is important; it must be snug enough that they transducers are held perpendicular to the test article and not allowed to rock around, while also allowing free enough translational movement along their center axis for the springs to be able to push them firmly against the transmission medium.
 
 The total apparatus has two of these block assemblies. One block is bolted directly to the rail and held stationary during the tests. The other is connected to via threaded rod to a double-acting piston and fixed to a carriage which rides along the rail. The piston is fixed to the rail by a bracket, and extends to push the block along the rail, securing the cell. By varying the pressure supplied to the piston, it can be used to apply a controlled stack pressure to the cell during testing.
 
+\subsection{Transmission Media}
 The Rexolite cylinder is included in the assembly as a transmission medium to ensure that the ultrasonic waves traverse the cell during Fraunhofer (far field) diffraction, rather than during noisy Fresnel (near field) diffraction. The extent of the near field $N$ is determined as follows:
 $$\label{eq:nearfield} N= \frac{D^2 f} {4c} $$
 where $D$ is the element diameter, $f$ is the wave frequency, and $c$ is the material sound velocity \cite{OLYMPUS}.
