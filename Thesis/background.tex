@@ -18,6 +18,16 @@ where $\mu_{Li(c)}$ is the lithium chemical potential of the cathode, $\mu_{Li(a
 Good charge and discharge performance requires that the "lithium insertion/extraction process should be reversible with no or minimal changes in the host structure over the entire range $x$ of lithium insertion in order to provide a good cycle life for the cell" \cite{LBST}.
 
 \subsection{Lithium Plating}
+The reactivity of lithium with its electrolyte can lead to considerable performance degradation \cite{HANDBOOK}. 
+This is exasperated because repetitive charge-discharge cycling can permanently change the cell \cite{HANDBOOK}.
+During recharging, as the lithium is forced back onto the cathode, it electroplates, forming a surface layer onto the cathode which has a larger surface area than the original metal \cite{HANDBOOK}. 
+Thus, charge and recharge cycling increases the surface area of the reacting surface, which correspondingly increases the reactivity \cite{HANDBOOK}. 
+Aggressive charge and discharge can force enough plating to significantly increase the surface area of the electrode, thus significantly increasing the cell's reactivity.
+These increases in reactivity reduce the cell's thermal stability, rendering the cell increasingly sensitive to abuse due to further cycling \cite{HANDBOOK}.
+
+The lithium electroplating and unplating which results from cyclic recharging and discharging also causes the surface of the lithium to develop a film of the reaction products between it and the electrolyte \cite{HANDBOOK}. 
+Each stripping and plating of the lithium with the reaction products' risks growing the film on the lithium's surface \cite{HANDBOOK}. 
+As the film grows in size, the proportion of electrochemically unreactive lithium grows, reducing the cell's useful capacity \cite{HANDBOOK}.
 
 \subsection{Charging Protocols}
 
@@ -34,12 +44,15 @@ stage 2: constant-voltage
 Charge with constant-voltage until the current steps down to ~0.1 Amps, at which point charging is complete \cite{DIGIKEY}. Constant-voltage charging prevents overcharge \cite{DIGIKEY}. The decreasing current required to maintain 4.2V is what creates the exponential decay shape of the current vs time plots during charging \cite{TI}.
 
 \subsection{Charging Rates}
-To normalize across battery capacities, charge or discharge current is often expressed as a C-rate \cite{SPECS}. A C-rate expresses the rate a battery at which a battery is discharged in terms of its maximum capacity; a 1C rate will fully discharge a battery in 1 hour, a C/2 rate will do so in 2 hours, and a 2C rate will discharge a battery in 1/2 hour \cite{SPECS}. Since the cells being investigated in this work have a roughly x Amp-hours \todo{number} capacity, a 1C rate uses \todo{number} Amps for charging, whereas a 10C rate uses \todo{number} Amps.
+To normalize across battery capacities, charge or discharge current is often expressed as a C-rate \cite{SPECS}. 
+A C-rate expresses the rate a battery at which a battery is discharged in terms of its maximum capacity; a 1C rate will fully discharge a battery in 1 hour, a C/2 rate will do so in 2 hours, and a 2C rate will discharge a battery in 1/2 hour \cite{SPECS}. 
+Since the cells being investigated in this work have a roughly x Amp-hours \todo{num} capacity, a 1C rate uses \todo{num} Amps for charging, whereas a 10C rate uses \todo{num} Amps.
 
 \section{Acoustic Time of Flight (ToF) Analysis}
 Recent work has shown that Acoustic Time of Flight (ToF) Analysis can show the state of charge and state of health of battery cells.
 
-Acoustic ToF analysis probes a unit with continuous acoustic waves, and makes conclusions based on how long it takes for waves to travel to the receiver (either the waves which travel through the test unit to a receiver, or the waves which reflect off of the material and back to the transmitter). How long it takes for a wave to travel from one point to another depends on the ubiquitous relation 
+Acoustic ToF analysis probes a unit with continuous acoustic waves, and makes conclusions based on how long it takes for waves to travel to the receiver (either the waves which travel through the test unit to a receiver, or the waves which reflect off of the material and back to the transmitter). 
+How long it takes for a wave to travel from one point to another depends on the ubiquitous relation 
 $$\text{distance} = \text{ rate} \times \text{ time} \rightarrow \text{ time} = \frac{\text{distance}}{\text{rate}}$$
 
 Nondestructive ultrasonic analysis measures the time of flight (how long it takes the wave to travel either back to the transmitter, or to a receiver), and the amplitude of the received signal. These quantities can be used to estimate the thickness of the material, $T$:

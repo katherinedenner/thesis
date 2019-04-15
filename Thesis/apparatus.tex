@@ -25,9 +25,10 @@ A thermal chamber was added to the set-up to hold the temperature of the cell an
 \section{Transducer Considerations}
 \subsection{Frequency versus Attenuation}
 The transducers introduce a number of important considerations into the design process.
-The selected transducers were \todo{number} MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would create a thickness of \todo{calc}. For such a small change in thickness to be perceptible by the transducers, they would need to have a very small wavelength \todo{why}. Due to the simple relationship 
+The selected transducers were \todo{number} MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would create a thickness of \todo{calc}. 
+For such a small change in thickness to be perceptible by the transducers, they would need to have a very small wavelength \todo{why}. Due to the simple relationship 
 $$ \lambda = c/f$$
-a transducer with a small wavelength will have an accordingly large frequency. At such a high frequency, the readings will be quite susceptible to attenuation, which increases linearly with the square of frequency and the square of bandwidth \cite{olympus}, putting resolution and attenuation at odds. Attenuation is \todo{what is}.
+a transducer with a small wavelength will have an accordingly large frequency. At such a high frequency, the readings will be quite susceptible to attenuation, which increases linearly with the square of frequency and the square of bandwidth \cite{OLYMPUS}, putting resolution and attenuation at odds. Attenuation is \todo{what is}.
 
 \subsection{Near-Field Effects}
 The sound field of a transducer is not constant, but rather split into two zones with distinct behavior: the near-field (or Fresnel) zone, and the far-field (or Fraunhofer) zone \cite{OLYMPUS}. 
@@ -50,14 +51,14 @@ For the reflected wave,
 $$\text{dB loss} = 10\log_{10} \frac{(Z_2 - Z_1)^2}{(Z_1 + Z_2)^2} \cite{OLYMPUS}$$
 
 For reflected waves, it is clear that the relative magnitude of the two impedances is very important, with materials of more similar impedances causing less loss.
-\todo{olympus 45 - good pic}
+\todo{oly 45 - good pic}
 
 \subsection{Focal Zone}
-		\todo{olympus p 45}
+		\todo{oly 45}
 		\begin{enumerate} 
 	        \item transducer focal zone
-	        \todo{compute focal zones of 2.5MHz, 10MHz, 15MHz}
-	        \todo{olympus 46}
+	        \todo{focal zones of 2.5MHz, 10MHz, 15MHz}
+	        \todo{oly 46}
 	    \end{enumerate}
 
 %%
@@ -116,10 +117,14 @@ The pneumatic piston was chosen as the actuator primarily for its relatively hig
 % THERMAL CHAMBER
 %%
 \section{Thermal Chamber}
-A modified minifridge serves as a thermal chamber to hold the temperature roughly constant during the tests. Some of the fridge's insulation needed to be cut away to allow airlines for the actuator to pass out of the fridge to the air source so it does not perfectly hold temperature, but the results are constant enough that a validation test confirmed that the thermal chamber prevents temperature-induced noise from overwhelming the acoustic signal \todo{ref rel sec}. The thermal chamber's temperature is not actively controlled; rather, it passively maintains its internal temperature by means of well-insulated walls and high thermal inertia filler (water-filled plastic containers). Its temperature is monitored by three thermocouples.
+A modified minifridge serves as a thermal chamber to hold the temperature roughly constant during the tests. 
+Some of the fridge's insulation needed to be cut away to allow airlines for the actuator to pass out of the fridge to the air source so it does not perfectly hold temperature, but the results are constant enough that a validation test confirmed that the thermal chamber prevents temperature-induced noise from overwhelming the acoustic signal \todo{ref rel sec}. 
+The thermal chamber's temperature is not actively controlled; rather, it passively maintains its internal temperature by means of well-insulated walls and high thermal inertia filler (water-filled plastic containers). 
+Its temperature is monitored by three thermocouples.
 
 \section{Electronics}
-\todo{insert lil flowchart}
+
+\todo{flowchart}
 
 Signal is created by a signal generator, per programmed parameters. This is passed through the transducer, which forms it into an acoustic wave. It passes this wave through the test unit to be received by a second transducer opposite it on the other side of the unit. The reading transducer is connected to a signal scope (the Picoscope unit) which reads this signal and reports it to the computer.
 
