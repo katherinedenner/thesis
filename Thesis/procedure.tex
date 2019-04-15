@@ -2,14 +2,13 @@
 
 \chapter{Experimental procedure}
 
-\section{Observing ToF Shifts Due to Change in Charge State}
+\section{Observing ToF Shifts Due to State of Charge}
 
-\subsection{Background}
-\todo{need?}
+\subsection{Acoustic Monitoring of Cell Cycling in Unsteady Conditions}
 
-\subsection{ToF Analysis of Cell at Rest in Uncontrolled Environment}
-
-The cell was cycled (charged and discharged) five times at a C/2.5 rate. Both the battery cell and the transducers used to send and receive the acoustic waves are subject to changes in operating characteristics due to change in temperature, so each testing protocol begins with a long rest to give the unit under test and the testing equipment time to acclimate to the ambient conditions. Then, the cell charges at a constant-current rate of 0.0120 Amps. 
+The cell was cycled (charged and discharged) five times at a C/2.5 rate. 
+Both the battery cell and the transducers used to send and receive the acoustic waves are subject to changes in operating characteristics due to change in temperature, so each testing protocol begins with a long rest to give the unit under test and the testing equipment time to acclimate to the ambient conditions. 
+Then, the cell charges at a constant-current rate of 0.0120 Amps. 
 The C/2.5 rate was chosen because such a gentle rate would induce very little lithium plating, and state of health of the cell would be roughly constant. 
 If the cell's state of health did not change between cycles, and the experiment's ambient conditions held steady, then all changes in acoustic time of flight can be assumed to be due to change in state of charge.
 The cycle then rested ten minutes, was discharged using the same constant-current, 1/2C protocol, and then rested for ten minutes again. 
@@ -23,7 +22,7 @@ Unfortunately, the assumption that the ambient conditions were steady did not ho
 
 \todo{insert plots?}
     
-\subsection{Acoustic observation of Cell at Rest in Thermal Chamber}
+\subsection{Acoustic Monitoring of Cell at Rest in Unsteady Conditions}
 
 Since it was impossible to determine the source of changes in ToF data for the prior test, or to determine what was signal and what was noise, a more piecewise approach to building up the experiment was needed. Due to the very small size of the cell, small variations in temperature and pressure could theoretically have relatively large impacts on the speed with which high-frequency acoustic waves travel through the cell. Some possible solutions were identified as: regulating the temperature to be relatively constant, better regulating the pressure applied to the cell, and using higher frequency transducers to probe the cell. Switching the 2.5MHz transducers for 15MHz transducers was quick and easy since the second set of transducers was already on hand, so this was done for the next trial. Additionally, the relatively loosely fluctuating ambient temperature was expected to have a relatively large effect on time of flight, so the pressurizing apparatus was inserted into a thermal chamber, as described in \todo{rel sec}. The stack pressure is already expected to be constant to within \todo{insert estimate}, so this was left unchanged, to be revisited only if necessary.
 
@@ -32,25 +31,22 @@ For now, the cell would be left at rest for the duration of the experiment.
 If there was no significant shift in acoustic ToF data while the cell waited at rest for a long period, then the noise in the environment is adequately controlled and cycling experimentation can proceed. 
 If there were still shifts, the environment would need further control, probably through higher-precision active temperature control and pressure control. 
 Currently, the temperature is controlled only passively through thermal isolation, with the active temperature control having a pretty loose accuracy of about 1 degree \todo{verify}.
-For 24 hours, the cell was probed ultrasonically while pressured in the thermal chamber. \todo{thermal, pressure data}.
+For 24 hours, the cell was probed ultrasonically while pressured in the thermal chamber \todo{thermal, pressure data}.
 
 \todo{plots}
 The data show that the ToF did not shift while the temperature was held constant, and then shifted in step with a shift in temperature at the end, verifying that this setup effectively reduced environmental noise to acceptable levels to begin attempting to observe ToF shifts due to cell state.
 \todo{describe plots a bit}
 
-    
-\subsection{Acoustic observation of cycling cell in thermal chamber}
+
+\subsection{Acoustic Monitoring of Cell Cycling in Steady Conditions}
 \todo{insert plots?}
 Once the noise levels were brought under control, attempting to observe change of state via acoustic ToF shift could begin. The cycle was set up as in \todo{rel sec}, with a long initial rest period to ensure starting conditions were steady state, then five cycles of a 10 minute rest $\rightarrow$ 1/2C current-controlled charge $\rightarrow$ 10 minute rest $\rightarrow$ 1/2C current-controlled discharge; see \todo{fig}. 
 The temperature was kept constant at about \todo{number}, and the system was kept pressurized to \todo{number}, which was a stack pressure of about \todo{number}, falling into Canarella's \todo{which} regime.
 
-\section{Observing ToF Shifts Due to Lithium Plating} 
+\section{Observing ToF Shifts Due to State of Health} 
 Once confirmed that this set-up was capable of observing change of state of charge of the cell, it could be investigated whether it could observe changes in state of health.
 
-\subsection{Background}
-\todo{need?}
-
-\subsection{Attempting to Acoustically Observe Lithium Plating of Cycling Cell in Thermal Chamber}
+\subsection{Acoustic Monitoring of Lithium Plating}
 \todo{flowchart}
 The battery was set-up in the pressurized, thermally-regulated apparatus as before; this time at a temperature of \todo{temp} C and a system pressurization of \todo{pres} psi, which applied a stack pressure of \todo{stack}. 
 The cell was again cycled but this time with aggressive ramps in charging rate. 
@@ -64,8 +60,14 @@ Lithium plating was expected to be observed in the latter two cycles \todo{why}.
 \subsubsection{X-Ray Photoelectron Spectroscopy Analysis of Cell}
     To independently determine the extent of lithium plating in the cell, it was analyzed via X-Ray Photoelectron Spectroscopy.
 
-\subsection{Attempt to Force and Observe Lithium Unplating}
+\subsection{Acoustic Monitoring of Lithium Unplating}
 
 \subsubsection{XPS Analysis of Cell}
 
 \subsubsection{SEM Analysis of Cell}
+
+\subsection{The Current Test - To What End?}
+
+\section{Observing ToF Shifts Due to Unsteady Conditions}
+
+\subsection{Acoustic Monitoring of Rapidly Cycling Cell in Unsteady Conditions}
