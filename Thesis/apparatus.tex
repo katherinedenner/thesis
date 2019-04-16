@@ -25,7 +25,7 @@ A thermal chamber was added to the set-up to hold the temperature of the cell an
 \section{Transducer Considerations}
 \subsection{Frequency versus Attenuation}
 The transducers introduce a number of important considerations into the design process.
-The selected transducers were \todo{number} MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would create a thickness of \todo{calc}. 
+The selected transducers were 15 MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would create a thickness of \todo{calc}. 
 For such a small change in thickness to be perceptible by the transducers, they would need to have a very small wavelength \todo{why}. Due to the simple relationship 
 $$ \lambda = c/f$$
 a transducer with a small wavelength will have an accordingly large frequency. At such a high frequency, the readings will be quite susceptible to attenuation, which increases linearly with the square of frequency and the square of bandwidth \cite{OLYMPUS}, putting resolution and attenuation at odds. Attenuation is \todo{what is}.
@@ -53,19 +53,6 @@ $$\text{dB loss} = 10\log_{10} \frac{(Z_2 - Z_1)^2}{(Z_1 + Z_2)^2} \cite{OLYMPUS
 For reflected waves, it is clear that the relative magnitude of the two impedances is very important, with materials of more similar impedances causing less loss.
 \todo{oly 45 - good pic}
 
-\subsection{Focal Zone}
-		\todo{oly 45}
-		\begin{enumerate} 
-	        \item transducer focal zone
-	        \todo{focal zones of 2.5MHz, 10MHz, 15MHz}
-	        \todo{oly 46}
-	    \end{enumerate}
-
-%%
-%% SENSORS %%
-%%
-%\section{Sensors}
-
 %%
 %% STRUCTURE %%
 %%
@@ -86,7 +73,7 @@ The total apparatus has two of these block assemblies. One block is bolted direc
 The Rexolite cylinder is included in the assembly as a transmission medium to ensure that the ultrasonic waves traverse the cell during Fraunhofer (far field) diffraction, rather than during noisy Fresnel (near field) diffraction. The extent of the near field $N$ is determined as follows:
 $$\label{eq:nearfield} N= \frac{D^2 f} {4c} $$
 where $D$ is the element diameter, $f$ is the wave frequency, and $c$ is the material sound velocity \cite{OLYMPUS}.
-$f$ needs to be kept high for this experiment, because thinner cells require shorter wavelengths\todo{elab} and thus greater frequencies to generate data at a useful resolution, and the cells of interest have a thickness on the order of microns. $D$ is fixed characteristic of the sensors. $c$ is a function of the transmission medium, and a medium besides the case of the cell will be necessary if $N$ is greater than the cell casing thickness, which in this case it is. The only one of those variables which is able to be somewhat manipulated for this experiment is $c$, which is an important consideration in transmission media materials selection. 
+$f$ needs to be kept high for this experiment, because thinner cells require shorter wavelengths and thus greater frequencies to generate data at a useful resolution, and the cells of interest have a thickness on the order of microns. $D$ is fixed characteristic of the sensors. $c$ is a function of the transmission medium, and a medium besides the case of the cell will be necessary if $N$ is greater than the cell casing thickness, which in this case it is. The only one of those variables which is able to be somewhat manipulated for this experiment is $c$, which is an important consideration in transmission media materials selection. 
 Thus, to avoid near field effects, the transducers must be mounted far enough from the cell that the wave does not enter the cell until after it has entered the far field regime. The near-field distance for combinations of two different transducers and two different transmission media is shown in \autoref{tab:nearfield}. The table shows that 1) ultrasonic transducers create waves which have much too large a near field to be mounted directly against the cell under test, and 2) in order for the apparatus to be useful with more ultrasonic sensors operating at different frequencies, the transmission media for the apparatus need to be modular so as to swap in transmission media of different sizes. In theory one could also change the material of the media to counteract greater or smaller near field effects, but it is more practical to change the size of the component. 
 
 \begin{table}[h]
@@ -104,14 +91,14 @@ Thus, to avoid near field effects, the transducers must be mounted far enough fr
 \end{table}
 
 
-Introducing a distance between the transducers and cell allows the experimental set-up to avoid Fresnel diffraction, but also introduces some losses due to the change in transmission media \todo{specify}. The magnitude of the losses depends in part on the difference in the impedances of the two media, so Rexolite (a variety of Nylon) was selected for its similar impedance to the aluminized polymer that comprises the outer layer of the battery cell, keeping the signal attenuation to a minimum \todo{imped calcs}. 
+Introducing a distance between the transducers and cell allows the analysis to avoid accommodating Fresnel diffraction, but also introduces some losses due to the acoustic interface at the change in transmission media. The magnitude of the losses depends in part on the difference in the impedances of the two media, so Rexolite (a variety of Nylon) was selected for its similar impedance to the aluminized polymer that comprises the outer layer of the battery cell, keeping the signal attenuation to a minimum \todo{imped calcs}. 
 Additionally, Rexolite takes to machining and finishing well, and for this material, it was important to be able to machine a flat surface onto the faces which contact the ultrasonic transducers and the test articles, in order to keep any dust or air from getting into the path of the ultrasonic waves and introducing noise to the readings.
  
 %%
 %% ACTUATOR
 %%
 \section{Actuator}
-The pneumatic piston was chosen as the actuator primarily for its relatively high precision and its relatively low cost. Other advantages include the relatively low set-up and calibration time required, its ease of control by adding an electronic or manually set pressure regulator into its air line, and its lack of any extraneous degrees of freedom. This piston in particular was chosen for having an internal double rail, which further reduces the potential for the piston to introduce misalignment into the system. Another factor considered in choosing the particular piston were its form factor. The chosen piston has flat sides and copious mounting holes, making it convenient to mount into the apparatus. Another important consideration is range of pressure outputs. While most of the time the desired stack pressure will likely be in Cannarella's "low stack pressure" regime (0-0.5MPa) \cite{STACK-STRESS}, its useful to leave open the option of inducing Cannarella's "high stack pressure" regime \cite{STACK-STRESS}, peaking at as much as 3.0 MPa, in order to induce lithium plating, if necessary. \todo{insert calculations ?} Thus, it is useful to have a piston capable of a broad range of output forces. A final useful feature is the piston's double acting configuration, which allows the piston to instantaneously either extend or retract without needing to reroute airlines. The piston is actuated by a relay and controlled by a Particle Photon microcontroller.
+The pneumatic piston was chosen as the actuator primarily for its relatively high precision and its relatively low cost. Other advantages include the relatively low set-up and calibration time required, its ease of control by adding an electronic or manually set pressure regulator into its air line, and its lack of any extraneous degrees of freedom. This piston in particular was chosen for having an internal double rail, which further reduces the potential for the piston to introduce misalignment into the system. Another factor considered in choosing the particular piston were its form factor. The chosen piston has flat sides and copious mounting holes, making it convenient to mount into the apparatus. Another important consideration is range of pressure outputs. While most of the time the desired stack pressure will likely be in Cannarella's "low stack pressure" regime (0-0.5MPa) \cite{STACK-STRESS}, its useful to leave open the option of inducing Cannarella's "high stack pressure" regime \cite{STACK-STRESS}, peaking at as much as 3.0 MPa, in order to induce lithium plating, if necessary. \todo{calcs?} Thus, it is useful to have a piston capable of a broad range of output forces. A final useful feature is the piston's double acting configuration, which allows the piston to instantaneously either extend or retract without needing to reroute airlines. The piston is actuated by a relay and controlled by a Particle Photon microcontroller.
 
 %%
 % THERMAL CHAMBER
@@ -133,4 +120,4 @@ Simultaneously, the Neware cycler unit is sending a current-controlled signal th
 Additionally, a set of thermocouples is used to monitor the temperature within the thermal chamber, to ensure that time of flight shifts are due to changes in the cell's activity and state rather than its temperature. These are read across a simple voltage divider and monitored by a microcontroller, with timestamps used to connect this thermal data with the electrochemical and acoustic data.
 
 A separate microcontroller drives the piston which applies a relatively consistent force to the cell during testing, controlling its stack pressure. A relieving pressure gauge modules the magnitude of this force to a roughly constant value, but it does not report the value and so the stack pressure is not logged. Adding this capability was considered, but it would have added expense to the testing setup and early trials showed that the current setup was sufficient.
-        \todo{read papers to get handle on four-lead measurement and cycling set-up}
+        \todo{four-lead measure and control}
