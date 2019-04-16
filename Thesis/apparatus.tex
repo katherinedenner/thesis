@@ -73,6 +73,11 @@ The total apparatus has two of these block assemblies. One block is bolted direc
 The Rexolite cylinder is included in the assembly as a transmission medium to ensure that the ultrasonic waves traverse the cell during Fraunhofer (far field) diffraction, rather than during noisy Fresnel (near field) diffraction. The extent of the near field $N$ is determined as follows:
 $$\label{eq:nearfield} N= \frac{D^2 f} {4c} $$
 where $D$ is the element diameter, $f$ is the wave frequency, and $c$ is the material sound velocity \cite{OLYMPUS}.
+\begin{figure}[t]\label{fig:fieldEffects}
+\includegraphics[]{fields-olympus-45}
+\centering
+\caption{An illustration of Fresnel and Fraunhofer fields from \cite{OLYMPUS}}
+\end{figure}
 $f$ needs to be kept high for this experiment, because thinner cells require shorter wavelengths and thus greater frequencies to generate data at a useful resolution, and the cells of interest have a thickness on the order of microns. $D$ is fixed characteristic of the sensors. $c$ is a function of the transmission medium, and a medium besides the case of the cell will be necessary if $N$ is greater than the cell casing thickness, which in this case it is. The only one of those variables which is able to be somewhat manipulated for this experiment is $c$, which is an important consideration in transmission media materials selection. 
 Thus, to avoid near field effects, the transducers must be mounted far enough from the cell that the wave does not enter the cell until after it has entered the far field regime. The near-field distance for combinations of two different transducers and two different transmission media is shown in \autoref{tab:nearfield}. The table shows that 1) ultrasonic transducers create waves which have much too large a near field to be mounted directly against the cell under test, and 2) in order for the apparatus to be useful with more ultrasonic sensors operating at different frequencies, the transmission media for the apparatus need to be modular so as to swap in transmission media of different sizes. In theory one could also change the material of the media to counteract greater or smaller near field effects, but it is more practical to change the size of the component. 
 
@@ -128,9 +133,9 @@ Thus, it is useful to have a piston capable of a broad range of output forces. A
 %%
 % THERMAL CHAMBER
 %%
-\section{Thermal Chamber}
+\section{Thermal Chamber}\label{thermalChamber}
 A modified minifridge serves as a thermal chamber to hold the temperature roughly constant during the tests. 
-Some of the fridge's insulation needed to be cut away to allow airlines for the actuator to pass out of the fridge to the air source so it does not perfectly hold temperature, but the results are constant enough that a validation test confirmed that the thermal chamber prevents temperature-induced noise from overwhelming the acoustic signal \todo{ref rel sec}. 
+Some of the fridge's insulation needed to be cut away to allow airlines for the actuator to pass out of the fridge to the air source so it does not perfectly hold temperature, but the results are constant enough that a validation test confirmed that the thermal chamber prevents temperature-induced noise from overwhelming the acoustic signal; see \hyperref[chamberTest]{\cref{chamberTest}}.  
 The thermal chamber's temperature is not actively controlled; rather, it passively maintains its internal temperature by means of well-insulated walls and high thermal inertia filler (water-filled plastic containers). 
 Its temperature is monitored by three thermocouples.
 

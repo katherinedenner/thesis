@@ -22,16 +22,15 @@ Unfortunately, the assumption that the ambient conditions were steady did not ho
 
 \todo{insert plots?}
     
-\subsection{Acoustic Monitoring of Cell at Rest in Unsteady Conditions}
-
-Since it was impossible to determine the source of changes in ToF data for the prior test, or to determine what was signal and what was noise, a more piecewise approach to building up the experiment was needed. Due to the very small size of the cell, small variations in temperature and pressure could theoretically have relatively large impacts on the speed with which high-frequency acoustic waves travel through the cell. Some possible solutions were identified as: regulating the temperature to be relatively constant, better regulating the pressure applied to the cell, and using higher frequency transducers to probe the cell. Switching the 2.5MHz transducers for 15MHz transducers was quick and easy since the second set of transducers was already on hand, so this was done for the next trial. Additionally, the relatively loosely fluctuating ambient temperature was expected to have a relatively large effect on time of flight, so the pressurizing apparatus was inserted into a thermal chamber, as described in \todo{rel sec}. The stack pressure is already expected to be constant to within \todo{insert estimate}, so this was left unchanged, to be revisited only if necessary.
+\subsection{Acoustic Monitoring of Cell at Rest in Unsteady Conditions}\label{chamberTest}
+Since it was impossible to determine the source of changes in ToF data for the prior test, or to determine what was signal and what was noise, a more piecewise approach to building up the experiment was needed. Due to the very small size of the cell, small variations in temperature and pressure could theoretically have relatively large impacts on the speed with which high-frequency acoustic waves travel through the cell. Some possible solutions were identified as: regulating the temperature to be relatively constant, better regulating the pressure applied to the cell, and using higher frequency transducers to probe the cell. Switching the 2.5MHz transducers for 15MHz transducers was quick and easy since the second set of transducers was already on hand, so this was done for the next trial. Additionally, the relatively loosely fluctuating ambient temperature was expected to have a relatively large effect on time of flight, so the pressurizing apparatus was inserted into a thermal chamber, as described in \hyperref[thermalChamber]{\cref{thermalChamber}}. The stack pressure is already expected to be constant to within \todo{insert estimate}, so this was left unchanged, to be revisited only if necessary.
 
 Additionally, the cycling was postponed to a later experiment.
 For now, the cell would be left at rest for the duration of the experiment. 
 If there was no significant shift in acoustic ToF data while the cell waited at rest for a long period, then the noise in the environment is adequately controlled and cycling experimentation can proceed. 
 If there were still shifts, the environment would need further control, probably through higher-precision active temperature control and pressure control. 
 Currently, the temperature is controlled only passively through thermal isolation, with the active temperature control having a pretty loose accuracy of about 1 degree \todo{verify}.
-For 24 hours, the cell was probed ultrasonically while pressured in the thermal chamber \todo{thermal, pressure data}.
+For 24 hours, the cell was probed ultrasonically while pressurized in the thermal chamber \todo{thermal, pressure data}.
 
 \todo{plots}
 The data show that the ToF did not shift while the temperature was held constant, and then shifted in step with a shift in temperature at the end, verifying that this setup effectively reduced environmental noise to acceptable levels to begin attempting to observe ToF shifts due to cell state.
@@ -40,8 +39,9 @@ The data show that the ToF did not shift while the temperature was held constant
 
 \subsection{Acoustic Monitoring of Cell Cycling in Steady Conditions}
 \todo{plots?}
-Once the noise levels were brought under control, attempting to observe change of state via acoustic ToF shift could begin. The cycle was set up as in \todo{rel sec}, with a long initial rest period to ensure starting conditions were steady state, then five cycles of a 10 minute rest $\rightarrow$ 1/2C current-controlled charge $\rightarrow$ 10 minute rest $\rightarrow$ 1/2C current-controlled discharge; see \todo{fig}. 
-The temperature was kept constant at about \todo{num}, and the system was kept pressurized to \todo{num}, which was a stack pressure of about \todo{num}, falling into Canarella's \todo{which} regime.
+Once the noise levels were brought under control, attempting to observe change of state via acoustic ToF shift could begin. The cycle was set up as in the first experiment, with a long initial rest period to ensure starting conditions were steady state, then five cycles of a 10 minute rest $\rightarrow$ 1/2C current-controlled charge $\rightarrow$ 10 minute rest $\rightarrow$ 1/2C current-controlled discharge; see \todo{fig}. 
+\todo{discuss temps}
+The system was kept pressurized to 2.4 PSI, which was a stack pressure of about 0.42MPa, falling into Cannarella's low stack pressure regime.
 
 \section{Observing ToF Shifts Due to State of Health} 
 Once confirmed that the experimental set-up was capable of observing change of state of charge of the cell, it could be investigated whether it could observe changes in state of health.
