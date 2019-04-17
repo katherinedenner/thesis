@@ -51,7 +51,6 @@ For the reflected wave,
 $$\text{dB loss} = 10\log_{10} \frac{(Z_2 - Z_1)^2}{(Z_1 + Z_2)^2} \cite{OLYMPUS}$$
 
 For reflected waves, it is clear that the relative magnitude of the two impedances is very important, with materials of more similar impedances causing less loss.
-\todo{oly 45 - good pic}
 
 %%
 %% STRUCTURE %%
@@ -111,7 +110,7 @@ Additionally, Rexolite takes to machining and finishing well, and for this mater
 %%
 \section{Actuator}
 The pneumatic piston was chosen as the actuator primarily for its relatively high precision and its relatively low cost. Other advantages include the relatively low set-up and calibration time required, its ease of control by adding an electronic or manually set pressure regulator into its air line, and its lack of any extraneous degrees of freedom. This piston in particular was chosen for having an internal double rail, which further reduces the potential for the piston to introduce misalignment into the system. Another factor considered in choosing the particular piston were its form factor. The chosen piston has flat sides and copious mounting holes, making it convenient to mount into the apparatus. Another important consideration is range of pressure outputs. While most of the time the desired stack pressure will likely be in Cannarella's "low" stack pressure regime (0-0.5MPa) \cite{STACK-STRESS}, it is useful to leave open the option of inducing Cannarella's "high" stack pressure regime \cite{STACK-STRESS}, peaking at as much as 3.0 MPa, in order to intentionally induce lithium plating, if necessary.
-Stack pressure $P_{stack}$ applied by the actuator as a function of the actuator's gauge pressure $P_{gauge}$ and nominal force output $F_$ at pressure $P_{nom}$ was calculated as follows:
+Stack pressure $P_{stack}$ applied by the actuator as a function of the actuator's gauge pressure $P_{gauge}$ and nominal force output $F$ at pressure $P_{nom}$ was calculated as follows:
 $$P_{stack} = F_{P_{nom}}\frac{P_{gauge}}{P_{nom}}\frac{1}{A} $$
 This calculation determined that the following forces would be required of the actuator to implement each of Cannarella's regimes:
 
@@ -145,8 +144,8 @@ Its temperature is monitored by three thermocouples.
 
 Signal is created by a signal generator, per programmed parameters. This is passed through the transducer, which forms it into an acoustic wave. It passes this wave through the test unit to be received by a second transducer opposite it on the other side of the unit. The reading transducer is connected to a signal scope (the Picoscope unit) which reads this signal and reports it to the computer.
 
-Simultaneously, the Neware cycler unit is sending a current-controlled signal through the leads of the cell via a pair of leads, and using a second pair of leads to read the cell's current and voltage. Timestamps are used to connect this electrochemical data with the acoustic data.
+Simultaneously, the Neware cycler unit is using a standard four-lead set-up to both cycle a load on the cell and to monitor the cell's state. The cycler sends a signal through the leads of the cell via one pair of leads, and uses a second pair of leads to read the cell's current and voltage. Timestamps connect this electrochemical data with the acoustic data.
 
 Additionally, a set of thermocouples is used to monitor the temperature within the thermal chamber, to ensure that time of flight shifts are due to changes in the cell's activity and state rather than its temperature. These are read across a simple voltage divider and monitored by a microcontroller, with timestamps used to connect this thermal data with the electrochemical and acoustic data.
 
-A separate microcontroller drives the piston which applies a relatively consistent force to the cell during testing, controlling its stack pressure. A relieving pressure gauge modules the magnitude of this force to a roughly constant value, but it does not report the value and so the stack pressure is not logged. Adding this capability was considered, but it would have added expense to the testing setup and early trials showed that the current setup was sufficient. \todo{four-lead measure and control}
+A separate microcontroller drives the piston which applies a relatively consistent force to the cell during testing, controlling its stack pressure. A relieving pressure gauge modules the magnitude of this force to a roughly constant value, but it does not report the value and so the stack pressure is not logged. Adding this capability was considered, but it would have added expense to the testing setup and early trials showed that the current setup was sufficient.
