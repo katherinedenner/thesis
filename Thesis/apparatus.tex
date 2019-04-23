@@ -16,7 +16,7 @@ Canarella showed that, when a cell is held such that it cannot expand, stack pre
 \todo{cite}
 Thus, the apparatus must hold the cell rigidly enough to prevent gaps forming in the acoustic pathway from the transmitting transducer to the receiving transducer, yet must also not apply so much pressure that it inhibits the very behavior which the experiment is intended to observe. 
 The pressure should be adjustable. This is in part because cells of different geometries will require different forces to experience a particular stack pressure. 
-Additionally, Cannarella defined low, medium, and high stack pressure regimes, and the high pressure regime could be used to induce lithium plating if need be.
+Additionally, Cannarella defined low, medium, and high stack pressure regimes, and the high pressure regime could be used to induce lithium plating if need be \cite{STACK-STRESS}.
 
 After initial experimentation, it became clear that the apparatus would also have to be relatively temperature controlled. 
 Temperature fluctuations lead to material changes in time of flight through the cell, introducing so much noise to the data that the signal was totally obscured.
@@ -25,7 +25,7 @@ A thermal chamber was added to the set-up to hold the temperature of the cell an
 \section{Transducer Considerations}
 \subsection{Frequency versus Attenuation}
 The transducers introduce a number of important considerations into the design process.
-The selected transducers were 15 MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would create a thickness of \todo{calc}. 
+The selected transducers were 15 MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would have a thickness on the order of microns. 
 For such a small change in thickness to be perceptible by the transducers, they would need to have a very small wavelength \todo{why}. Due to the simple relationship 
 $$ \lambda = c/f$$
 a transducer with a small wavelength will have an accordingly large frequency. At such a high frequency, the readings will be quite susceptible to attenuation, which increases linearly with the square of frequency and the square of bandwidth \cite{OLYMPUS}, putting resolution and attenuation at odds. Attenuation is \todo{what is}.
@@ -144,8 +144,8 @@ Its temperature is monitored by three thermocouples.
 
 Signal is created by a signal generator, per programmed parameters. This is passed through the transducer, which forms it into an acoustic wave. It passes this wave through the test unit to be received by a second transducer opposite it on the other side of the unit. The reading transducer is connected to a signal scope (the Picoscope unit) which reads this signal and reports it to the computer.
 
-Simultaneously, the Neware cycler unit is using a standard four-lead set-up to both cycle a load on the cell and to monitor the cell's state. The cycler sends a signal through the leads of the cell via one pair of leads, and uses a second pair of leads to read the cell's current and voltage. Timestamps connect this electrochemical data with the acoustic data.
+Simultaneously, the Neware cycler unit is using a standard four-lead set-up to both induce a load on the cell and to monitor the cell's state. The cycler sends a signal through the leads of the cell via one pair of leads, and uses a second pair of leads to read the cell's current and voltage. Timestamps connect this electrochemical data to the acoustic data.
 
-Additionally, a set of thermocouples is used to monitor the temperature within the thermal chamber, to ensure that time of flight shifts are due to changes in the cell's activity and state rather than its temperature. These are read across a simple voltage divider and monitored by a microcontroller, with timestamps used to connect this thermal data with the electrochemical and acoustic data.
+A trio of thermocouples monitors the temperature within the thermal chamber, to ensure that time of flight shifts are due to changes in the cell's state rather than its temperature. These are read across a simple voltage divider and monitored by a microcontroller, with timestamps connecting this thermal data to the electrochemical and acoustic data.
 
-A separate microcontroller drives the piston which applies a relatively consistent force to the cell during testing, controlling its stack pressure. A relieving pressure gauge modules the magnitude of this force to a roughly constant value, but it does not report the value and so the stack pressure is not logged. Adding this capability was considered, but it would have added expense to the testing setup and early trials showed that the current setup was sufficient.
+A separate microcontroller drives the piston which applies a relatively consistent force to the cell during testing, controlling its stack pressure. A relieving pressure gauge holds the magnitude of this force to a roughly constant value, but it does not report the value and so the stack pressure is not logged. Adding this capability was considered, but it would have added expense and early trials showed that the current setup was sufficient.
