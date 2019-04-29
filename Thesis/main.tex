@@ -11,24 +11,37 @@
 \usepackage{todonotes}
 \usepackage{hyperref} % used for hyperlinked, verbose references
 \usepackage{cleveref}
-
-% required inputs:
+%%
+%% REQUIRED INPUTS
+%%
 \author{Katherine Denner}
 \classyear{`19}
 \adviser{Daniel Steingart}
-\reader{ }
+\reader{Craig Arnold}
 \title{Identification of lithium deposition and characterization of state of charge and health in extreme fast charge cells using ultrasonic methods}
 \dept{Mechanical and Aerospace Engineering}
 \submitdate{01 May 2019}
 \course{MAE442}
 \abstract{\input{abstract}}
 
+%%
+%% OPTIONAL INPUTS: NOTES, DEDICATION, ACKNOWLEDGEMENTS
+%%
+
 %\extranotes{These are a few lines of optional notes} 
 %\dedication{To}
-%\acknowledgements{Thank}
+\acknowledgements{
+% thank the members of the lab
+I thank Clem, Wes, Tom, and particularly Greg for their patience and support.
+\\
+I am grateful for funding from the John Marshall II Memorial Prize Fund.
+}
 
 \numberwithin{equation}{section}
 
+%%
+%% CONTENT: CHAPTERS, BIBLIOGRAPHY, APPENDICES
+%%
 \begin{document}
 
 \include{introduction} % include pulls from precompiled .aux and is faster than \input, but won't work with labels from other sections; use it when able
@@ -39,7 +52,7 @@
 
 \include{results}
 
-%\input{discussion}
+\include{conclusion}
 
 \bibliography{biblio}
 \bibliographystyle{ieeetr}
