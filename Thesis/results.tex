@@ -26,13 +26,67 @@ SEM (scanning electron microscope) and XPS (X-Ray Photoelectron Spectroscopy) an
 
 To confirm plating had indeed occurred, a cell was dissected and used for optical, SEM, and XPS analysis.
 
-\begin{figure}[t]\label{fig:optical}
-\includegraphics[width=0.6\textwidth]{Thesis/optical.JPG}
+\begin{figure}[t!]\label{fig:optical}
 \centering
-\caption{A cell cut open after electrochemical cycling. The light region is lithiated.}
+\caption{Cells cut open after experiencing 5C and zero (left) or one (center) 10C cycles. The dark regions are the graphite electrode, and the light regions lithiation.}
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.45\textwidth]{optical5c.JPG}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.45\textwidth]{optical.JPG}
+     \end{subfigure}
 \end{figure}
 
 Optical analysis provided quick confirmation that the cell had plated; since the cell had not been used before the experimental protocol described above, it can be safely assumed the plating occurred then. SEM and XPS analyses provide more sophisticated information about the plating. 
+
+%%
+%% SEM ANALYSIS
+%%
+\subsubsection{SEM Imaging}
+\begin{figure}[t!]\label{fig:sem}
+\centering
+\caption{SEM images of cells after experiencing a few 5C cycles and either zero (left), one (center), or two (right) 10C cycles.}
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.3\textwidth]{sem5c.png}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.3\textwidth]{sem10cx1.png}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.3\textwidth]{sem10cx2.png}
+     \end{subfigure}
+\end{figure}
+
+Three cells were dissected to produce SEM images. Each cell ran through a few 5C charge cycles before finishing with either no 10C cycles, one 10C cycle, or two 10C cycles. The large bulbous objects are particles of the graphite cathode. The tendrils are lithium plating, which forms in snaking dendrites. The more plating, the denser they become, as shown in \hyperref[fig:sem]{\cref{fig:sem}}.  It was expected based on the ToF shifts that the 5C cycles caused light plating and the 10C cycles each caused heavy plating, and the SEM images confirmed this; see \hyperref[tab:plating]{\cref{tab:plating}}. These measurements have some caveats. Firstly, the thickness and density of the plating was not consistent across the whole surface area of the cell, as can be seen in the optical images. 
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c|c|c}
+         \# 10C Cycles & Estimated Lithiation Thickness ($\mu$m) \\
+         \hline
+         0 & $<1$ \\
+         1 & 8.3 \\
+         2 & 21.2 \\
+    \end{tabular}
+    \caption{Comparison of the number of 10C cycles a cell experienced, and the thickness of its lithium plating.}
+    \label{tab:plating}
+\end{table}
+
+
+%%
+%% XPS ANALYSIS
+%%
+\subsubsection{XPS Results}
+One cell was analyzed using XPS analysis.
+
 
 \section{Time of Flight Shift Due to Change in Ambient Conditions}
 In the first experiment which demonstrated the technique, ambient temperature was held quite steady, and had no material impact on acoustic TOF through the cell. 
