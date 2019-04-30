@@ -32,15 +32,15 @@ Operating the cell in a way which prevents or reduces lithium passivation can pr
 
 \subsubsection{Charging Protocols}
 
-stage 0: preconditioning
+\subsubsection*{Stage 0: Preconditioning}
 
 If the cell was deeply discharged, it should first be charged at a very low current, so that minimal heat is generated before the cell is in such a state that it can deal with that heat \cite{DIGIKEY}.
 
-stage 1: constant-current 
+\subsubsection*{Stage 1: Constant-Current} 
 
 Drive the cell at a constant current to get its voltage to 4.2V. The higher the current, the faster this charging stage happens, but also the more damage delivered to the cell \cite{TI}. Charging rates are often limited to 1C, but fast charging can allow for higher rates \cite{TI}.
 
-stage 2: constant-voltage 
+\subsubsection*{Stage 2: Constant-Voltage}  
 
 Charge with constant-voltage until the current steps down to ~0.1 Amps, at which point charging is complete \cite{DIGIKEY}. Constant-voltage charging prevents overcharge \cite{DIGIKEY}. The decreasing current required to maintain 4.2V is what creates the exponential decay shape of the current vs time plots during charging \cite{TI}.
 

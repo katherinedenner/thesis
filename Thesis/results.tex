@@ -24,6 +24,15 @@ Since the ambient conditions were steady and there was no variation in the cycli
 This is corroborated in each of the experiments. 
 SEM (scanning electron microscope) and XPS (X-Ray Photoelectron Spectroscopy) analysis confirm plating on the electrodes of the cells, but such techniques do not provide information on when the plating occurred. \todo{moar}
 
+To confirm plating had indeed occurred, a cell was dissected and used for optical, SEM, and XPS analysis.
+
+\begin{figure}[t]\label{fig:optical}
+\includegraphics[width=0.6\textwidth]{Thesis/optical.JPG}
+\centering
+\caption{A cell cut open after electrochemical cycling. The light region is lithiated.}
+\end{figure}
+
+Optical analysis provided quick confirmation that the cell had plated; since the cell had not been used before the experimental protocol described above, it can be safely assumed the plating occurred then. SEM and XPS analyses provide more sophisticated information about the plating. 
 
 \section{Time of Flight Shift Due to Change in Ambient Conditions}
 In the first experiment which demonstrated the technique, ambient temperature was held quite steady, and had no material impact on acoustic TOF through the cell. 
@@ -37,25 +46,19 @@ More accurate results resulted from interpolating the temperature data using lin
 
 The analysis shows a reasonable estimate at how the ToF would shift without the influence of the ambient temperature shifts, potentially broadening the application of the technique in monitoring cells.
 \begin{figure}[t]\label{fig:0417tofshiftadj}
-\includegraphics[width=\textwidth]{Thesis/0417tofshiftadj.png}
+\includegraphics[width=0.75\textwidth]{Thesis/0417tofshiftadj.png}
 \centering
 \caption{ToF Shift across the experiment. This plot compares the unaltered ToF shift, the ToF shift adjusted using a change in ToF - change in temperature regression using interpolated temperatures, and the ToF shift adjusted using a regression of maximum change in ToF shifts and averaged temperatures.}
 \end{figure}
 
-One check for these is to compare them to an idealized prediction of how the TOF should actually shift during the experiment. 
+One check is to compare them to an idealized prediction of how the TOF should actually shift during the experiment. 
 Since each cycle at a particular charge rate has a consistent duration and consistent effect on the cell's state of charge, it is easy to compare ToF shift data between cycles. 
-At any particular point in the cycle's duration, the ToF shift in each cycle should match. Charge (see \hyperref[fig:0417chargeadj]{\cref{fig:0417chargeadj}}) and discharge (see \hyperref[fig:0417dischargeadj]{\cref{fig:0417dischargeadj}}) cycle ToF data, when overlaid, show how consistent or inconsistent the ToF shifts are across the experiment.
+At any particular point in the cycle's duration, the ToF shift in each cycle should match. Charge and discharge cycle ToF data, when overlaid (see \hyperref[fig:0417overlays]{\cref{fig:0417overlays}}), show how consistent or inconsistent the ToF shifts are across the experiment.
 Ideally there would be perfect overlap in the data from each cycle within a protocol within an experiment, but before the ambient temperature shift's influence was removed, this was clearly not the case. 
 The overlap is still imperfect after the TOF shift data was adjusted based on the regressions, but it is much better.
 
-\begin{figure}[t]\label{fig:0417chargeadj}
-\includegraphics[width=0.75\textwidth]{Thesis/0417chargeAdjust.png}
+\begin{figure}[t]\label{fig:0417overlays}
+\includegraphics[width=0.95\textwidth]{Thesis/0417overlays.png}
 \centering
-\caption{Overlays of the ToF shift across each charge cycle. On the left are the unadjusted data, and on the right are the data controlled to remove the influence of ambient temperature fluctuations.}
-\end{figure}
-
-\begin{figure}[t]\label{fig:0417dischargeadj}
-\includegraphics[width=0.75\textwidth]{Thesis/0417dischargeAdjust.png}
-\centering
-\caption{Overlays of the ToF shift across each discharge cycle. On the left are the unadjusted data, and on the right are the data controlled to remove the influence of ambient temperature fluctuations.}
+\caption{Overlays of the raw and adjusted ToF shifts across each charge cycle (far and center left) and discharge cycle (center and far right). The adjusted data used a regression to remove the influence of ambient temperature fluctuations.}
 \end{figure}
