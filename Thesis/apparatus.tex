@@ -56,12 +56,21 @@ For reflected waves, it is clear that the relative magnitude of the two impedanc
 %% STRUCTURE %%
 %%
 \section{Structure}
-\todo{PIC cad ass whole}
+\begin{figure}[t]\label{fig:unexploded}
+    \includegraphics[width=0.95\textwidth]{Thesis/unexploded.PNG}
+    \centering
+    \caption{The apparatus made for the experiment; thermal chamber and electronics not shown.}
+\end{figure}
 
 The basic apparatus is a pair of blocks mounted to a rail. A row of holes is drilled into the blocks to hold an array of ultrasonic transducers, with channels milled out for routing their cables. A small plate with its own set of holes and channels bolts to this block to hold the transducers in place. Bolting to this plate is a small cylinder of Rexolite (a nylon variant), used as a low-interference medium for manipulating the travel distance of the ultrasonic waves to eliminate near-field effects, as will be discussed in greater detail later.
 
-\todo{PIC cad part block}
-Behind the first set of holes in the block is a second set of narrower holes, for spring-loading the transducers. The springs ensure the transducers are pressed against the face of the transfer medium. The faces of the Rexolite cylinders are turned flat so that the transducer emits and receives waves at an angle perpendicular to the test article. \todo{PIC cad part plate} The plate further facilitates keeping everything coaxial. The three parts bolt together using one set of bolts which pass through all three, ensuring a tight, flat fit \todo{PIC subass block plate Rexolite ducers bolts}. This both keeps the transducers perpendicular to the test article and coaxial with each each other, as well as preventing any disruptive air from getting in the path of the ultrasonic waves, allowing unnecessary attenuation to reduce the quality of the data. 
+\begin{figure}[t]\label{fig:clamp}
+    \includegraphics[width=0.75\textwidth]{Thesis/clamp.PNG}
+    \centering
+    \caption{An exploded view of the clamp used to keep the transducers properly aligned, and their waves in the far-field while transmitting through the cell.}
+\end{figure}
+
+Behind the first set of holes in the block is a second set of narrower holes, for spring-loading the transducers. The springs ensure the transducers are pressed against the face of the transfer medium. The faces of the Rexolite cylinders are turned flat so that the transducer emits and receives waves at an angle perpendicular to the test article. The plate further facilitates keeping everything coaxial. The three parts bolt together using one set of bolts which pass through all three, ensuring a tight, flat fit. This both keeps the transducers perpendicular to the test article and coaxial with each each other, as well as preventing any disruptive air from getting in the path of the ultrasonic waves, allowing unnecessary attenuation to reduce the quality of the data. 
 
 \subsection{Manufacturing Considerations}
 Aluminum was chosen as the material for the blocks for its durability and machinability. Machinability was important because of the relatively tight tolerances required of these parts. Since the test articles are so thin and the ultrasonic transducers to high-frequency, small differences in actual versus expected transducer position could create insurmountable noise in the readings. Of particular importance were flatness of the various components (so that small angles are not introduced to the transducer position) and accuracy of the hole positions for the transducers relative to each other and to the mounting hole for the piston rod. Additionally, the fit of the holes for the transducers is important; it must be snug enough that they transducers are held perpendicular to the test article and not allowed to rock around, while also allowing free enough translational movement along their center axis for the springs to be able to push them firmly against the transmission medium.
@@ -140,11 +149,9 @@ Its temperature is monitored by three thermocouples.
 
 \section{Electronics}
 
-\todo{flowchart}
-
 Signal is created by a signal generator, per programmed parameters. This is passed through the transducer, which forms it into an acoustic wave. It passes this wave through the test unit to be received by a second transducer opposite it on the other side of the unit. The reading transducer is connected to a signal scope (the Picoscope unit) which reads this signal and reports it to the computer.
 
-Simultaneously, the Neware cycler unit is using a standard four-lead set-up to both induce a load on the cell and to monitor the cell's state. The cycler sends a signal through the leads of the cell via one pair of leads, and uses a second pair of leads to read the cell's current and voltage. Timestamps connect this electrochemical data to the acoustic data.
+The Neware cycler unit uses a standard four-lead set-up to both induce a load on the cell and to monitor the cell's state. The cycler sends a signal through the leads of the cell via one pair of leads, and uses a second pair of leads to read the cell's current and voltage. Timestamps connect this electrochemical data to the acoustic data.
 
 A trio of thermocouples monitors the temperature within the thermal chamber, to ensure that time of flight shifts are due to changes in the cell's state rather than its temperature. These are read across a simple voltage divider and monitored by a microcontroller, with timestamps connecting this thermal data to the electrochemical and acoustic data.
 
