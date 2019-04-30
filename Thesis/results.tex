@@ -5,26 +5,34 @@ The data clearly show first a relationship between cell state of charge the acou
 Recall that the three sources of change in acoustic time of flight through a cell are change in state of charge, change in state of health, and change in ambient conditions. 
 By systematically adding and understanding changes in each category to the experimental conditions, shifts in acoustic ToF through the cell can be observed, analyzed, and then attributed to each source of change.
 
-When the ambient conditions were steady, the relationship between SoC and ToF was very clear \todo{plot}. Ambient temperature variation clearly has a significant effect on the acoustic TOF shifts. \todo{fig} shows a comparison between the measured TOF data and "idealized" TOF from a gentle, non-plating routine, constructed by assuming the data ought not change between cycles and copying the first waveform repeatedly as a result. In the absence of plating and at the same state of charge, the relationship between change in ToF shift and change in ambient temperature is consistent enough that much of the influence of temperature can be scrubbed out using simple regressions.
+When the ambient conditions were steady, the relationship between SoC and ToF was very clear, as shown in \hyperref[fig:0315]{\cref{fig:0315}}. Ambient temperature variation clearly has a significant effect on the acoustic TOF shifts. \hyperref[fig:0417tofshiftadj]{\cref{fig:0417tofshiftadj}} shows a comparison between the measured TOF data and "idealized" TOF from a gentle, non-plating routine, constructed by assuming the data ought not change between cycles and copying the first waveform repeatedly as a result. In the absence of plating and at the same state of charge, the relationship between change in ToF shift and change in ambient temperature is consistent enough that much of the influence of temperature can be scrubbed out using simple regressions.
 
+%%
+%% STATE OF CHARGE
+%%
 \section{Time of Flight Shift Due to Change in State of Charge}
-The data clearly demonstrate a strong and consistent relationship between acoustic ToF through the cell and the cell's state of charge while ambient conditions and cell state of health are held steady.
+The data clearly demonstrate a strong and consistent relationship between acoustic ToF through the cell and the cell's state of charge while ambient conditions and cell state of health are held steady.  \hyperref[fig:0315]{\cref{fig:0315}} shows a protocol with two C/2.5, two 2C, two 5C, and two 10C charging cycles. The TOF data is very similar for each of the cycles in the C/2.5 and 2C cycles, which would would expect since the temperature is roughly constant, and there should have been no appreciable plating at such gentle cycles. One would expect that if the only cause in ToF shift was change in state of charge, then the ToF at the beginning of the charge cycle and the end of the discharge cycle would be the same, which is approximately the case for the C/2.5 and 2C cycles. Starting a bit with the 5C cycles and becoming quite noticeable with the 10C cycles, there is an offset between the ToF the charging portion of the cycle begins at, and the ToF the discharging portion ends at; this was not the case with the gentle cycles and happens despite the temperature holding relatively steady (about $1^{\circ}$C variation across all four latter cycles), suggesting the cause is lithium plating (a change in the state of health o the cell).
+
+\begin{figure}[t]\label{fig:0315}
+    \includegraphics[width=0.55\textwidth]{Thesis/0315.png}
+    \centering
+    \caption{ToF Shift across the experiment, with load voltage and temperature shift.}
+\end{figure}
 
 The shift in ToF was determined using a colleague's cross-correlation analysis of each received waveform to a reference waveform. The reference waveform was chosen from one of earliest waveforms in the experiment, but not too early, in order to allow for start-up effects to dissipate.
 During the C/2.5 charge and discharge cycling, which does not appreciably plate the cell and therefore can be assumed to not change the state of health of the cell, the ToF data follows a very regular pattern. 
 The ToF shift peaks at roughly the same value, and at the same point in the cycling protocol: when the routine finishes charging. 
 Conversely, the ToF shift experiences a minimum of fairly consistent value at the end of each discharge period.
 
-\todo{fig}
-
+%%
+%% STATE OF HEALTH
+%%
 \section{Time of Flight Shift Due to Change in State of Health}
 The data in the same test goes on to demonstrate acoustic TOF analysis's capability to observe plating, and therefore change in a cell's state of health. This is shown during the 5C and especially 10C routines in the experiment. 
 While the TOF data maintains a consistent form for each of those protocols, the "neutral axis" to which it returns between cycles increases each time. 
 Since the ambient conditions were steady and there was no variation in the cycling protocols, these changes in the TOF shift show lingering changes in the state of health of the cell. 
 This is corroborated in each of the experiments. 
-SEM (scanning electron microscope) and XPS (X-Ray Photoelectron Spectroscopy) analysis confirm plating on the electrodes of the cells, but such techniques do not provide information on when the plating occurred. \todo{moar}
-
-To confirm plating had indeed occurred, a cell was dissected and used for optical, SEM, and XPS analysis.
+SEM (scanning electron microscope) and XPS (X-Ray Photoelectron Spectroscopy) analyses confirm plating on the electrodes of the cells, but such techniques do not provide information on when the plating occurred.
 
 \begin{figure}[t!]\label{fig:optical}
 \centering
@@ -103,15 +111,29 @@ However, subsequent experiments were unable to maintain such optimal conditions.
 During routines using gentle C/2.5 cycling, thus maintaining state of health, the influence of ambient temperature changes on acoustic TOF can be isolated from the influence of state of charge changes with reasonable success. 
 Polynomial fits and linear regressions correlate change in ambient temperature with change in ToF shift. 
 
-The thermocouples and transducers have different sampling rates and schedules, so a couple approaches created paired change in ToF shift and change in temperature data; these are plotted against each other in \todo{ref}. 
+The thermocouples and transducers have different sampling rates and schedules, so a couple approaches created paired change in ToF shift and change in temperature data; these are compared in \hyperref[fig:0417temp]{\cref{fig:0417temp}}. 
 In one version of the analysis, change in temperature data was averaged across a cycle and regressed against change in TOF shift data. 
+\begin{figure}[t]\label{fig:0417temp}
+    \includegraphics[width=0.55\textwidth]{0417temp.png}
+    \centering
+    \caption{Calculated vs measured temperatures.}
+\end{figure}
 More accurate results resulted from interpolating the temperature data using linear or polynomial fits, depending on the shape of the temperature data.
 
 The analysis shows a reasonable estimate at how the ToF would shift without the influence of the ambient temperature shifts, potentially broadening the application of the technique in monitoring cells.
-\begin{figure}[t]\label{fig:0417tofshiftadj}
-\includegraphics[width=0.75\textwidth]{Thesis/0417tofshiftadj.png}
+
+\begin{figure}[t!]\label{fig:adj}
 \centering
-\caption{ToF Shift across the experiment. This plot compares the unaltered ToF shift, the ToF shift adjusted using a change in ToF - change in temperature regression using interpolated temperatures, and the ToF shift adjusted using a regression of maximum change in ToF shifts and averaged temperatures.}
+\caption{ToF Shift across Experiments C (left) and D (right). This plot compares the unaltered ToF shift, the ToF shift adjusted using a change in ToF - change in temperature regression using interpolated temperatures, and the ToF shift adjusted using a regression of maximum change in ToF shifts and averaged temperatures.}
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.45\textwidth]{Thesis/0409adj.png}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.45\textwidth]{0417tofshiftadj.png}
+     \end{subfigure}
 \end{figure}
 
 One check is to compare them to an idealized prediction of how the TOF should actually shift during the experiment. 
@@ -123,5 +145,11 @@ The overlap is still imperfect after the TOF shift data was adjusted based on th
 \begin{figure}[t]\label{fig:0417overlays}
 \includegraphics[width=0.95\textwidth]{Thesis/0417overlays.png}
 \centering
-\caption{Overlays of the raw and adjusted ToF shifts across each charge cycle (far and center left) and discharge cycle (center and far right). The adjusted data used a regression to remove the influence of ambient temperature fluctuations.}
+\caption{Overlays of the raw and adjusted ToF shifts across each charge cycle (far and center left) and discharge cycle (center and far right) from Experiment D. The adjusted data used a regression to remove the influence of ambient temperature fluctuations.}
+\end{figure}
+
+\begin{figure}[t]\label{fig:0409overlays}
+\includegraphics[width=0.95\textwidth]{Thesis/0409overlays.png}
+\centering
+\caption{Overlays of the raw and adjusted ToF shifts across each charge cycle (far and center left) and discharge cycle (center and far right) from Experiment C. The adjusted data used a regression to remove the influence of ambient temperature fluctuations.}
 \end{figure}
