@@ -115,6 +115,8 @@ It also assumes a solid lithium plate of constant density, which, to reiterate, 
 
 The literature suggests that volume changes of other components of the cell would have similarly small contributions to the change in acoustic ToF. Siegel et al demonstrated that repeated 5C cycling of lithium ion pouch cells experienced a volume expansion of just 1.5\% across 21 cycles \cite{EXPANSION}, suggesting that the cells in these experiments would have experienced similarly small changes in volume, which would have minimally contributed to the changes in ToF shift following plating. Indeed, Davies et al induced an increase in cell thickness by charging a pouch cell yet found that due to the overwhelimg influence of other factors on ToF, the cell's ToF actually decreased as the cell charged \cite{SOC-SOH-EST}.
 
+That said, it could be argued that the gradually increasing ToF shifts from the 5C and especially 10C cycles are due to viscoelastic relaxation - while the 10 minute rest periods between cycles was enough for the C/2.5 and 2C cycles, the more strenuous cycles perhaps require more time for full relaxation. However, this is refuted by the data from the longer three hours rests which serve as transitions between charging rates. Take as example the three hour rest between the 5C and 10C rates in Experiment D; the ToF shift is near constant, suggesting no relaxation takes place, and the progressively increasing ToF shift during that cycle was in fact due to plating; the optical, SEM, and XPS imaging results reinforce this.
+
 %%
 %% XPS ANALYSIS
 %%
@@ -150,7 +152,7 @@ In one version of the analysis, change in temperature data was averaged across a
 More accurate results resulted from interpolating the temperature data using linear or polynomial fits, depending on the shape of the temperature data.
 
 The analysis shows a reasonable estimate at how the ToF would shift without the influence of the ambient temperature shifts, potentially broadening the application of the technique in monitoring cells. The data from Experiment D provides the following correction to remove the influence of temperature fluctuations from time of flight data:
-$$ \text{ToF}_{adj} = TOF_{meas} + 33.46145655009315\Delta T^2 + 48.35171206297682*\Delta T + 13.405773641338019)$$
+$$ \text{ToF}_{adj} = \text{ToF}_{meas} + 33.46\Delta T^2 + 48.35\Delta T + 13.41)$$
 
 \begin{figure}[t!]\label{fig:adj}
 \centering
