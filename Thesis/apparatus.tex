@@ -26,7 +26,11 @@ A thermal chamber was added to the set-up to hold the temperature of the cell an
 \subsection{Frequency versus Attenuation}
 The transducers introduce a number of important considerations into the design process.
 The selected transducers were 15 MHz. The fast-charge cells are quite thin, and lithium plating on their electrode would have a thickness on the order of microns. 
-For such a small change in thickness to be perceptible by the transducers, they would need to have a very small wavelength \todo{why}. Due to the simple relationship 
+For such a small change in thickness to be perceptible by the transducers, they would need to have a very small wavelength due to the Rayleigh Criterion. The Rayleigh criterion places a minimum on the resolvable detail, according to the relationship
+$$\sin \theta _R = 1.22 \frac{\lambda}{d}$$
+
+showing that the resolution of an image is directly limited by the wavelength used to produce it \cite{RAYLEIGH}.
+Due to the simple relationship 
 $$ \lambda = c/f$$
 a transducer with a small wavelength will have an accordingly large frequency. At such a high frequency, the readings will be quite susceptible to attenuation, which increases linearly with the square of frequency and the square of bandwidth \cite{OLYMPUS}, putting resolution and attenuation at odds. Attenuation is \todo{what is}.
 
