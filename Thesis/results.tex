@@ -7,7 +7,7 @@ By systematically adding and understanding changes in each category to the exper
 
 SoC and SoH cause changes in the travel time of an ultrasonic signal through the cell due to changes to the cell's bulk properties, including the materials composition of each layer, the stiffnesses and densities of these materials, and the thicknesses of these layers \cite{SOC-SOH-EST}. The relationship between the velocity $V_p$ at which a wave travels through an isotropic elastic material can and the materials properties of the material its traveling through can be expressed as
 $$ V_p = \sqrt{\frac{K + \frac{3}{4}G}{\rho}}$$
-where $K$ is the material bulk modulus, $G$ is the material shear modulus, and $\rho$ is the material density \cite{SOC-SOH-EST}. This shows that increases in a layer's density will increase the time a wave spends transmitting through a layer, causing a positive TOF shift. Conversely, increases in a layer's bulk and shear moduli (essentially, stiffening of the layer), will allow the ultrasonic wave to propogate through the layer more quickly, causing a negative TOF shift. As the state of charge of the cell changes, lithium ions are forced to move between electrodes, changing the cell's materials composition and materials structure. As the state of health changes, metallic lithium both collects on the surface of the graphite electrode, and fills some of the graphite's pores, changing the stiffness of the material and its density. The density and thickness of various layers of the cell at different states of charge or health is complicated to model, but the particulars aren't actually needed in order to interpret changes in ToF as caused by changes in state of health, state of charge, or even changes in ambient conditions. In order to avoid that complicated analysis, this work focuses on the metric of change in ToF shift. For any given state of health, cycling of state of charge should create a consistently undulating curve, so if a cycle's ToF shift is normalized against the ToF shift data from the first cycle, changes in either state of health or ambient conditions can be observed. The remainder of this paper will step through the analysis to build that up step by step, first by establishing an understanding of the relationship between ToF shift and state of charge, then considering variation in state of health, and finally incorporating change in ambient temperature, a step not taken in prior work.
+where $K$ is the material bulk modulus, $G$ is the material shear modulus, and $\rho$ is the material density \cite{SOC-SOH-EST}. This shows that increases in a layer's density will increase the time a wave spends transmitting through a layer, causing a positive TOF shift. Conversely, increases in a layer's bulk and shear moduli (essentially, stiffening of the layer), will allow the ultrasonic wave to propagate through the layer more quickly, causing a negative TOF shift. As the state of charge of the cell changes, lithium ions are forced to move between electrodes, changing the cell's materials composition and materials structure. As the state of health changes, metallic lithium both collects on the surface of the graphite electrode, and fills some of the graphite's pores, changing the stiffness of the material and its density. The density and thickness of various layers of the cell at different states of charge or health is complicated to model, but the particulars aren't actually needed in order to interpret changes in ToF as caused by changes in state of health, state of charge, or even changes in ambient conditions. In order to avoid that complicated analysis, this work focuses on the metric of change in ToF shift. For any given state of health, cycling of state of charge should create a consistently undulating curve, so if a cycle's ToF shift is normalized against the ToF shift data from the first cycle, changes in either state of health or ambient conditions can be observed. The remainder of this paper will step through the analysis to build that up step by step, first by establishing an understanding of the relationship between ToF shift and state of charge, then considering variation in state of health, and finally incorporating change in ambient temperature, a step not taken in prior work.
 
 When this paper discusses wave arrivals, it is shorthand for first-arrival; subsequent arrivals change less straightforwardly than the first arrival since they are impacted by the thickness of each layer and the relative properties of each adjacent layer \cite{SOC-SOH-EST}, complicating analysis without adding much understanding, so are ignored in these analyses.
 
@@ -17,7 +17,7 @@ When this paper discusses wave arrivals, it is shorthand for first-arrival; subs
 \section{Time of Flight Shift Due to Change in State of Charge}
 The data clearly demonstrate a strong and consistent relationship between acoustic ToF through the cell and the cell's state of charge while ambient conditions and cell state of health are held steady.  \hyperref[fig:0315]{\cref{fig:0315}} shows a protocol with two C/2.5, two 2C, two 5C, and two 10C charging cycles. The TOF data is very similar for each of the cycles in the C/2.5 and 2C cycles, which would would expect since the temperature is roughly constant, and there should have been no appreciable plating at such gentle cycles. One would expect that if the only cause in ToF shift was change in state of charge, then the ToF at the beginning of the charge cycle and the end of the discharge cycle would be the same, which is approximately the case for the C/2.5 and 2C cycles. Starting a bit with the 5C cycles and becoming quite noticeable with the 10C cycles, there is an offset between the ToF the charging portion of the cycle begins at, and the ToF the discharging portion ends at; this was not the case with the gentle cycles and happens despite the temperature holding relatively steady (about $1^{\circ}$C variation across all four latter cycles), suggesting the cause is lithium plating (a change in the state of health of the cell).
 
-\begin{figure}[t]\label{fig:0315}
+\begin{figure}[h!]\label{fig:0315}
     \includegraphics[width=0.55\textwidth]{Thesis/0315.png}
     \centering
     \caption{ToF Shift across the experiment, with load voltage and temperature shift.}
@@ -38,7 +38,7 @@ Since the ambient conditions were steady and there was no variation in the cycli
 This is corroborated by optical, SEM, and XPS imaging. 
 SEM (scanning electron microscope) and XPS (X-Ray Photoelectron Spectroscopy) analyses confirm plating on the electrodes of the cells, but such techniques do not provide information on when the plating occurred.
 
-\begin{figure}[t!]\label{fig:optical}
+\begin{figure}[h!]\label{fig:optical}
 \centering
      \begin{subfigure}
          \centering
@@ -58,7 +58,7 @@ Visual analysis provided simple confirmation that the cell had plated; since the
 %% SEM ANALYSIS
 %%
 \subsubsection{SEM Imaging}
-\begin{figure}[t!]\label{fig:sem}
+\begin{figure}[h!]\label{fig:sem}
 \centering
 \caption{SEM images of cells after experiencing a few 5C cycles and either zero (left), one (center), or two (right) 10C cycles.}
      \begin{subfigure}
@@ -113,7 +113,21 @@ the measured change in acoustic ToF attributable to the change in volume due to 
 It assumes the cell's strenuous operation and resulting lithium plating had no effect on the graphite.
 It also assumes a solid lithium plate of constant density, which, to reiterate, is not truly the case. Nonetheless, those should have small effects on the response. 
 
-The literature suggests that volume changes of other components of the cell would have similarly small contributions to the change in acoustic ToF. Siegel et al demonstrated that repeated 5C cycling of lithium ion pouch cells experienced a volume expansion of just 1.5\% across 21 cycles \cite{EXPANSION}, suggesting that the cells in these experiments would have experienced similarly small changes in volume, which would have minimally contributed to the changes in ToF shift following plating. Indeed, Davies et al induced an increase in cell thickness by charging a pouch cell yet found that due to the overwhelimg influence of other factors on ToF, the cell's ToF actually decreased as the cell charged \cite{SOC-SOH-EST}.
+The literature suggests that volume changes of other components of the cell would have similarly small contributions to the change in acoustic ToF. Siegel et al demonstrated that repeated 5C cycling of lithium ion pouch cells experienced a volume expansion of just 1.5\% across 21 cycles \cite{EXPANSION}, suggesting that the cells in these experiments would have experienced similarly small changes in volume, which would have minimally contributed to the changes in ToF shift following plating. Indeed, Davies et al induced an increase in cell thickness by charging a pouch cell yet found that due to the overwhelming influence of other factors on ToF, the cell's ToF actually decreased as the cell charged \cite{SOC-SOH-EST}.
+
+\begin{figure}[h!]\label{fig:rest}
+\centering
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.48\textwidth]{Thesis/0409rest.png}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}
+         \centering
+         \includegraphics[width=0.48\textwidth]{Thesis/0417rest.png}
+     \end{subfigure}
+     \caption{These plots comparing ToF shift, $\Delta$T, and voltage across experiments C and D show that the increases in ToF created by the 5C cycles persist even though the extended three hour rests; visually, any variation in ToF across the rests corresponds with changes in temperature.}
+\end{figure}
 
 That said, it could be argued that the gradually increasing ToF shifts from the 5C and especially 10C cycles are due to viscoelastic relaxation - while the 10 minute rest periods between cycles was enough for the C/2.5 and 2C cycles, the more strenuous cycles perhaps require more time for full relaxation. However, this is refuted by the data from the longer three hours rests which serve as transitions between charging rates. Take as example the three hour rest between the 5C and 10C rates in Experiment D; the ToF shift is near constant, suggesting no relaxation takes place, and the progressively increasing ToF shift during that cycle was in fact due to plating; the optical, SEM, and XPS imaging results reinforce this.
 
@@ -144,7 +158,7 @@ Polynomial fits and linear regressions correlate change in ambient temperature w
 
 The thermocouples and transducers have different sampling rates and schedules, so a couple approaches created paired change in ToF shift and change in temperature data; these are compared in \hyperref[fig:0417temp]{\cref{fig:0417temp}}. 
 In one version of the analysis, change in temperature data was averaged across a cycle and regressed against change in TOF shift data. 
-\begin{figure}[t]\label{fig:0417temp}
+\begin{figure}[h!]\label{fig:0417temp}
     \includegraphics[width=0.55\textwidth]{0417temp.png}
     \centering
     \caption{Calculated vs measured temperatures.}
@@ -152,9 +166,10 @@ In one version of the analysis, change in temperature data was averaged across a
 More accurate results resulted from interpolating the temperature data using linear or polynomial fits, depending on the shape of the temperature data.
 
 The analysis shows a reasonable estimate at how the ToF would shift without the influence of the ambient temperature shifts, potentially broadening the application of the technique in monitoring cells. The data from Experiment D provides the following correction to remove the influence of temperature fluctuations from time of flight data:
-$$ \text{ToF}_{adj} = \text{ToF}_{meas} + 33.46\Delta T^2 + 48.35\Delta T + 13.41)$$
 
-\begin{figure}[t!]\label{fig:adj}
+$$ \text{ToF}_{adj} = \text{ToF}_{meas} + 35.66\Delta T^2 + 59.07\Delta T + 22.77)$$
+
+\begin{figure}[h!]\label{fig:adj}
 \centering
      \begin{subfigure}
          \centering
@@ -175,13 +190,13 @@ At any particular point in the cycle's duration, the ToF shift in each cycle sho
 Ideally there would be perfect overlap in the data from each cycle within a protocol within an experiment, but before the ambient temperature shift's influence was removed, this was clearly not the case. 
 The overlap is still imperfect after the TOF shift data was adjusted based on the regressions, but it is much better.
 
-\begin{figure}[t]\label{fig:0417overlays}
+\begin{figure}[h!]\label{fig:0417overlays}
 \includegraphics[width=0.95\textwidth]{Thesis/0417overlays.png}
 \centering
 \caption{Overlays of the raw and adjusted ToF shifts across each charge cycle (far and center left) and discharge cycle (center and far right) from Experiment D. The adjusted data used a regression to remove the influence of ambient temperature fluctuations.}
 \end{figure}
 
-\begin{figure}[t]\label{fig:0409overlays}
+\begin{figure}[h!]\label{fig:0409overlays}
 \includegraphics[width=0.95\textwidth]{Thesis/0409overlays.png}
 \centering
 \caption{Overlays of the raw and adjusted ToF shifts across each charge cycle (far and center left) and discharge cycle (center and far right) from Experiment C. The adjusted data used a regression to remove the influence of ambient temperature fluctuations.}

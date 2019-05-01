@@ -1,5 +1,4 @@
 % lithium ion: lithium cobalt oxide / graphite
-% 0.30 mAh
 \chapter{Procedure}
 The experimental procedures aimed to progressively change the cell's state of charge and state of health systematically, such that the influence of each on shift in acoustic ToF through the cell would be observable.
 The goal of the first experiment was to acoustically observe first shifts in ToF data due to change in a cell's state of charge, and then shifts due to cycling-induced lithium plating, a form of change of the cell's state of health. 
@@ -8,7 +7,7 @@ In response, several improvements were made to the experimental apparatus in an 
 The second experiment's goal was to determine whether these changes adequately controlled the ambient conditions to prevent them from overwhelming the ToF data with noise; it was successful. 
 The experiment showed a close and consistent relationship between time of flight and cell state of charge (ToF and SoC).
 
-Recall that three three main actors of change on an acoustic wave's time of flight through a battery cell are ambient conditions (most relevantly, temperature and pressure), state of charge, and state of health \todo{cite?}. Now that the set-up was validated to have minimal change in ambient conditions, and a relationship between ToF and SoC strongly established, further experimentation could reasonably explore the relationship between the cell's state of health and acoustic time of flight. The goal of the next experiment was to force plating via aggressive electrochemical cycling, and acoustically observe this while it happens using ToF data; it was successful. Following that, the goal of the next fourth experiment was to induce a minimum of plating on the cell, to use as a point of comparison; this was accomplished by cycling the cell at 5C but never 10C rates of charge. The subsequent goal was to induce just some plating in the cell, by loading at a 10C charge rate for only one charging cycle; it was successful. Then, to build up more data for analysis, potentially for use in controlling for the influence of temperature, a cell was cycled at C/2.5 20 times, before being destructively cycled at progressively higher rates until 10C.
+Recall that three three main actors of change on an acoustic wave's time of flight through a battery cell are ambient conditions (temperature and pressure), state of charge, and state of health, as shown by the prior literature such as \cite{SOC-SOH-EST}, and the fact that acoustic velocity through a material is constant at a given temperature and pressure \cite{OLYMPUS}. Now that the set-up was validated to have minimal change in ambient conditions, and a relationship between ToF and SoC strongly established, further experimentation could reasonably explore the relationship between the cell's state of health and acoustic time of flight. The goal of the next experiment was to force plating via aggressive electrochemical cycling, and acoustically observe this while it happens using ToF data; it was successful. Following that, the goal of the next fourth experiment was to induce a minimum of plating on the cell, to use as a point of comparison; this was accomplished by cycling the cell at 5C but never 10C rates of charge. The subsequent goal was to induce just some plating in the cell, by loading at a 10C charge rate for only one charging cycle; it was successful. Then, to build up more data for analysis, potentially for use in controlling for the influence of temperature, a cell was cycled at C/2.5 20 times, before being destructively cycled at progressively higher rates until 10C.
 
 \section{Observing ToF Shifts Due to State of Charge}
 
@@ -33,12 +32,12 @@ Additionally, the cycling was postponed to a later experiment.
 For now, the cell would be left at rest for the duration of the experiment. 
 If there was no significant shift in acoustic ToF data while the cell waited at rest for a long period, then the noise in the environment is adequately controlled and cycling experimentation can proceed. 
 If there were still shifts, the environment would need further control, probably through higher-precision active temperature control and pressure control. 
-For 24 hours, the cell was probed ultrasonically while pressurized in the thermal chamber \todo{thermal, pressure data}.
+For 24 hours, the cell was probed ultrasonically while pressurized in the thermal chamber.
 
 The data show that the ToF did not shift while the temperature was held constant, and then shifted in step with a shift in temperature at the end, verifying that this setup effectively reduced environmental noise to acceptable levels to begin attempting to observe ToF shifts due to cell state.
 
 \subsection{Experiment A: Acoustic Monitoring of Electrochemical Cycling}
-\begin{figure}[t]\label{fig:neware0309}
+\begin{figure}[h!]\label{fig:neware0309}
     \includegraphics[width=0.75\textwidth]{Thesis/neware0309.PNG}
     \centering
     \caption{The protocol for experiment A.}
@@ -56,16 +55,16 @@ The latter two cycles expect lithium plating.
 
 \section{Observing ToF Shifts Due to State of Health} 
 \subsection{Experiment B: Acoustic Monitoring of Lithium Plating}
-\begin{figure}[t]\label{fig:neware0325}
+\begin{figure}[h!]\label{fig:neware0325}
     \includegraphics[width=0.75\textwidth]{Thesis/neware0325.PNG}
     \centering
     \caption{The protocol for experiment B.}
 \end{figure}
 
-The goal of this test was to plate lithium at less aggressive charging rates of 5C, rather than 10C, so that most or all appreciable plating would be removed during the discharge cycle. XPS and SEM analysis showed this to be mostly successful \todo{moar}. However, the temperature fluctuated much more during this experiment than the prior, and this lead to noisy readings of time of flight. This created an opportunity to relate change in ambient temperature with change in time acoustic time of flight. 
+The goal of this test was to plate lithium at less aggressive charging rates of 5C, rather than 10C, so that most or all appreciable plating would be removed during the discharge cycle. XPS and SEM analysis showed this to be mostly successful. However, the temperature fluctuated much more during this experiment than the prior, and this lead to noisy readings of time of flight. This created an opportunity to relate change in ambient temperature with change in time acoustic time of flight. 
 
 \subsection{Experiment C: Acoustic Monitoring of Minimal Lithium Plating}
-\begin{figure}[t]\label{fig:neware0409}
+\begin{figure}[h!]\label{fig:neware0409}
     \includegraphics[width=0.75\textwidth]{Thesis/neware0409.PNG}
     \centering
     \caption{The protocol for experiment C.}
@@ -74,7 +73,7 @@ The goal of this experiment was to plate a fixed amount of lithium. It used a pr
 
 
 \subsection{Experiment D: Acoustic Monitoring of Gentle Cycling}
-\begin{figure}[t]\label{fig:neware0417}
+\begin{figure}[h!]\label{fig:neware0417}
     \includegraphics[width=0.75\textwidth]{Thesis/neware0417.PNG}
     \centering
     \caption{The protocol for experiment D.}
