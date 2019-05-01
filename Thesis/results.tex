@@ -77,32 +77,47 @@ The cells from Experiments A, B, and C were dissected to produce SEM images. Eac
 The large bulbous objects are particles of the graphite electrode. The tendrils are lithium plating, which forms in snaking dendrites. 
 The more plating, the denser they become, as shown in \hyperref[fig:sem]{\cref{fig:sem}}.  
 
-It was expected based on the ToF shifts that the 5C cycles caused light plating and the 10C cycles each caused heavy plating, and the SEM images confirmed this; see \hyperref[tab:plating]{\cref{tab:plating}}. 
+It was expected based on the ToF shifts that the 5C cycles caused light plating and the 10C cycles each caused heavy plating, and the SEM images confirmed this; see \hyperref[tab:plating]{\cref{tab:plating}}. All three cells show at least some plating, but the amount varies significantly. The cell which experienced no 10C cycles have contiguous surface area, but rather mostly have the lithium dendrites in some of the graphite's pore space. The cells which experienced 10C cycling have significant, continuous layers of plated lithium on the surface of the graphite.
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{c|c|c|c}
-         \# 10C Cycles & Estimated Lithiation Thickness ($\mu$m) \\
+    \begin{tabular}{c|c|c}
+         \# 10C Cycles & Estimated Lithiation Thickness ($\mu$m) & Estimated ToF Shift (ns) \\
          \hline
-         0 & $<1$ \\
-         1 & 8.3 \\
-         2 & 21.2 \\
+         0 & $<1$ & ~0 \\
+         1 & 8.3 & 1.38 \\
+         2 & 21.2 & 3.533 \\
     \end{tabular}
-    \caption{Comparison of the number of 10C cycles a cell experienced, and the thickness of its lithium plating.}
+    \caption{Comparison of the number of 10C cycles a cell endured and the thickness of its lithium plating.}
     \label{tab:plating}
 \end{table}
+
+The speed of sound through lithium is 6000 m/s \cite{lithium}. According to the simple relation
+
+$$ distance = rate \times time \rightarrow \frac{distance}{rate} = time$$
+
+the measured change in acoustic ToF attributable to the change in volume due to lithium plating is 1.38ns for the cell that endured one 10C cycle, 3.533ns for the cell that endured two 10C cycles, and an immaterial amount for the cell that endured zero 10C cycles. Clearly, the sheer added distance the wave must traverse due to the thickness of the lithium plating is not the primary driver of change in acoustic ToF due resulting from changes to the cell's state of health. The literature suggests that volume changes of other components of the cell would have similarly small contributions to the change in acoustic ToF. Siegel et al demonstrated that repeated 5C cycling of lithium ion pouch cells experienced a volume expansion of just 1.5\% across 21 cycles \cite{EXPANSION}, 
 
 These measurements have some caveats. 
 Firstly, the thickness and density of the plating was not consistent across the whole surface area of the cell, as can be seen in the optical images; this may have been due to pinching around the edges of the cell from its casing.
 Secondly, the scissors used to slice part of the cell away for analysis compressed the lithium; how large this effect was, and how consistent, is unknown. 
 Thirdly, the plating is interspersed with the electrolyte, so the layer of lithium plating isn't pure lithium but rather a mixture.
-
+Some of the lithium is also interspersed in pores within the graphite mass.
+The rough math here assumes discrete layers of electrode, lithiation, and electrolyte, but that is not the case.
+It assumes the cell's strenuous operation and resulting lithium plating had no effect on the graphite.
+It also assumes a solid lithium plate of constant density, which, to reiterate, is not truly the case.
 
 %%
 %% XPS ANALYSIS
 %%
 \subsubsection{XPS Results}
-The cell from Experiment A was analyzed using XPS analysis.
+The cell from Experiment A was analyzed using XPS analysis. Across four scans of the cell, the binding energy for Li1s peaked at 57.72 eV, 56.41 eV, 54.96 eV, and 58.48 eV. Those peaks suggest the presence of metallic lithium, which peaks at a binding energy of 54.90 eV \cite{NIST}. Metallic lithium ought not be present during nominal operation of a lithium-ion cell but will deposit as a result of strenuous cycling \cite{lithium}. Therefore, the XPS data corroborates the results of the above proposed interpretation of the acoustic ToF analysis, as well as the optical and SEM imaging.
+
+\begin{figure}[h!]\label{fig:xps}
+    \includegraphics[width=0.85\textwidth]{Thesis/xps.png}
+    \centering
+    \caption{Li1s scan results from XPS imaging of the cell from Experiment A.}
+\end{figure}
 
 %%
 %% TEMPERATURE STUFF
@@ -126,16 +141,16 @@ The analysis shows a reasonable estimate at how the ToF would shift without the 
 
 \begin{figure}[t!]\label{fig:adj}
 \centering
-\caption{ToF Shift across Experiments C and D. This plot compares the unaltered ToF shift, the ToF shift adjusted using a change in ToF - change in temperature regression using interpolated temperatures, and the ToF shift adjusted using a regression of maximum change in ToF shifts and averaged temperatures. The horizontal lines represent the baseline ToF that, in idealized conditions, would be observed during the rest between discharge and charge cycles.}
      \begin{subfigure}
          \centering
-         \includegraphics[width=0.45\textwidth]{Thesis/0409adj.png}
+         \includegraphics[width=0.48\textwidth]{Thesis/0409adj.png}
      \end{subfigure}
      \hfill
      \begin{subfigure}
          \centering
-         \includegraphics[width=0.45\textwidth]{Thesis/0417adj.png}
+         \includegraphics[width=0.48\textwidth]{Thesis/0417adj.png}
      \end{subfigure}
+     \caption{ToF shift across experiment duration. These compare the unaltered ToF shift, the ToF shift adjusted using a change in ToF - $\Delta T$ regression using interpolated temperatures, and the ToF shift adjusted using a regression of maximum change in ToF shifts and averaged $\Delta T$ (D only). The horizontal lines represent the baseline ToF shift that, in ideal conditions, would occur during the intercycle rest.}
 \end{figure}
 
 One check is to compare them to an idealized prediction of how the TOF should actually shift during the experiment. 
